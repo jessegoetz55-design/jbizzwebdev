@@ -68,28 +68,54 @@
         .reveal.in { opacity: 1; transform: none; }
         /* ADDED: gold text helper */
         .text-gold { color: #D4AF37; }
+        /* Mobile menu */
+        #mobile-menu { transition: transform 0.35s ease, opacity 0.35s ease; }
+        #mobile-menu.open { transform: translateX(0); opacity: 1; pointer-events: auto; }
+        /* Scroll-spy active nav */
+        .nav-link.active { color: #D4AF37; }
+        /* FAQ chevron smooth rotate */
+        details summary i { transition: transform 0.3s ease; }
+        details[open] summary i { transform: rotate(180deg); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-    <!-- Strong Glass Nav (ADDED: section links) -->
+    <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 glass border-b border-white/20">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <a href="#top"><img src="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/jbizz-logo.png" alt="J Bizz Web Dev" class="h-9 w-auto"></a>
             <div class="hidden md:flex items-center gap-x-8 text-sm text-white/70">
-                <a href="#services" class="hover:text-white transition">Services</a>
-                <a href="#process" class="hover:text-white transition">Process</a>
-                <a href="#work" class="hover:text-white transition">Work</a>
-                <a href="#products" class="hover:text-white transition">Products</a>
-                <a href="#faq" class="hover:text-white transition">FAQ</a>
+                <a href="#services" class="nav-link hover:text-white transition">Services</a>
+                <a href="#process" class="nav-link hover:text-white transition">Process</a>
+                <a href="#work" class="nav-link hover:text-white transition">Work</a>
+                <a href="#products" class="nav-link hover:text-white transition">Products</a>
+                <a href="#faq" class="nav-link hover:text-white transition">FAQ</a>
             </div>
-            <a href="#contact" class="glow-gold bg-white hover:bg-[#D4AF37] text-black px-8 py-3.5 rounded-2xl text-sm font-bold transition">Start Your Project</a>
+            <div class="flex items-center gap-x-3">
+                <a href="#contact" class="glow-gold bg-white hover:bg-[#D4AF37] text-black px-8 py-3.5 rounded-2xl text-sm font-bold transition">Start Your Project</a>
+                <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-y-1.5 rounded-xl glass" aria-label="Open menu">
+                    <span class="w-5 h-0.5 bg-white transition-all" id="bar1"></span>
+                    <span class="w-5 h-0.5 bg-white transition-all" id="bar2"></span>
+                    <span class="w-5 h-0.5 bg-white transition-all" id="bar3"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero (UNCHANGED) -->
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-zinc-950/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-y-8 text-2xl font-semibold opacity-0 pointer-events-none" style="transform: translateX(100%);">
+        <a href="#services" class="mobile-nav-link hover:text-[#D4AF37] transition">Services</a>
+        <a href="#process" class="mobile-nav-link hover:text-[#D4AF37] transition">Process</a>
+        <a href="#work" class="mobile-nav-link hover:text-[#D4AF37] transition">Work</a>
+        <a href="#products" class="mobile-nav-link hover:text-[#D4AF37] transition">Products</a>
+        <a href="#faq" class="mobile-nav-link hover:text-[#D4AF37] transition">FAQ</a>
+        <a href="#contact" class="mobile-nav-link glow-gold bg-white text-black px-10 py-4 rounded-2xl text-lg font-bold hover:bg-[#D4AF37] transition mt-4">Start Your Project</a>
+    </div>
+
+    <!-- Hero -->
     <section id="top" class="min-h-[100dvh] flex items-center pt-16 relative">
         <div class="absolute inset-0 bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:5px_5px]"></div>
+        <div class="absolute inset-0 bg-cover bg-center opacity-15" style="background-image: url('https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/hero.jpg')"></div>
         <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
             <div class="inline-flex items-center gap-x-2 px-5 py-2 rounded-full glass mb-8">
                 <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
@@ -114,7 +140,31 @@
         </div>
     </section>
 
-    <!-- Glassmorphism Service Cards (UNCHANGED) -->
+    <!-- Stats Bar -->
+    <section class="border-t border-b border-white/10 bg-black py-10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-gold">50+</div>
+                    <div class="text-white/50 text-sm mt-1 tracking-wide">Sites Launched</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-gold">1–3</div>
+                    <div class="text-white/50 text-sm mt-1 tracking-wide">Week Turnaround</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-gold">100%</div>
+                    <div class="text-white/50 text-sm mt-1 tracking-wide">Mobile-First</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-gold">24/7</div>
+                    <div class="text-white/50 text-sm mt-1 tracking-wide">AI Features Running</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glassmorphism Service Cards -->
     <section id="services" class="py-20 border-t border-white/10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-14 reveal">
@@ -233,6 +283,57 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">CLIENT LOVE</div>
+                <h2 class="text-6xl font-semibold tracking-tight">Real people.<br>Real results.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal">
+                    <div class="flex gap-x-1 text-gold mb-5 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white/80 leading-relaxed mb-6">"Jesse built our new site in under two weeks and our lead volume tripled the first month. The AI chatbot alone paid for the project."</p>
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold">M</div>
+                        <div>
+                            <div class="font-semibold text-sm">Mike T.</div>
+                            <div class="text-white/40 text-xs">Home Services Contractor, FL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal">
+                    <div class="flex gap-x-1 text-gold mb-5 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white/80 leading-relaxed mb-6">"Finally a developer who actually explains what they're building and why. The site looks premium and it converts. Couldn't ask for more."</p>
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold">S</div>
+                        <div>
+                            <div class="font-semibold text-sm">Sarah K.</div>
+                            <div class="text-white/40 text-xs">Real Estate Agent, TX</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal">
+                    <div class="flex gap-x-1 text-gold mb-5 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white/80 leading-relaxed mb-6">"Super fast, clean design, and he was responsive the whole way through. Our old site was embarrassing — this one we're proud to share."</p>
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold">D</div>
+                        <div>
+                            <div class="font-semibold text-sm">David R.</div>
+                            <div class="text-white/40 text-xs">Fitness Studio Owner, GA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ADDED: FAQ section -->
     <section id="faq" class="py-20 border-t border-white/10 bg-black">
         <div class="max-w-3xl mx-auto px-6">
@@ -287,12 +388,61 @@
         <p class="text-center text-white/30 text-xs mt-8">© 2026 J Bizz Web Developments · jbizzwebdev.com</p>
     </footer>
 
-    <!-- ADDED: reveal-on-scroll script -->
+    <!-- Scripts -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Reveal on scroll
         const io = new IntersectionObserver(es => es.forEach(e => {
             if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
         }), { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        // Mobile hamburger menu
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+        const BAR_OFFSET = '8px';
+        const BAR_OPEN_1 = `translateY(${BAR_OFFSET}) rotate(45deg)`;
+        const BAR_OPEN_3 = `translateY(-${BAR_OFFSET}) rotate(-45deg)`;
+        let menuOpen = false;
+        toggle.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                menu.classList.add('open');
+                bar1.style.transform = BAR_OPEN_1;
+                bar2.style.opacity = '0';
+                bar3.style.transform = BAR_OPEN_3;
+            } else {
+                menu.classList.remove('open');
+                bar1.style.transform = '';
+                bar2.style.opacity = '';
+                bar3.style.transform = '';
+            }
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                menu.classList.remove('open');
+                bar1.style.transform = '';
+                bar2.style.opacity = '';
+                bar3.style.transform = '';
+            });
+        });
+
+        // Scroll-spy: -40% top / -55% bottom keeps the active section centred in the viewport
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const spyObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        sections.forEach(s => spyObserver.observe(s));
     </script>
 </body>
 </html>
