@@ -33,6 +33,24 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Conversion tracking: GA4 loads ONLY when a real measurement ID is set in assets/site-config.js -->
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){ window.dataLayer.push(arguments); }</script>
+    <script src="assets/site-config.js"></script>
+    <script>
+    (function () {
+        var id = (window.SITE_CONFIG || {}).gaMeasurementId;
+        // Placeholder "G-XXXXXXXXXX" (or empty) = demo mode: no tracking script loads, no data sent.
+        if (id && !/^G-X+$/.test(id)) {
+            var s = document.createElement("script");
+            s.async = true;
+            s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+            document.head.appendChild(s);
+            gtag("js", new Date());
+            gtag("config", id);
+        }
+    })();
+    </script>
     <style>
         html { scroll-behavior: smooth; } /* ADDED */
         body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
@@ -79,6 +97,7 @@
             <div class="hidden md:flex items-center gap-x-8 text-sm text-white/70">
                 <a href="#services" class="hover:text-white transition">Services</a>
                 <a href="#process" class="hover:text-white transition">Process</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
                 <a href="#work" class="hover:text-white transition">Work</a>
                 <a href="#products" class="hover:text-white transition">Products</a>
                 <a href="#faq" class="hover:text-white transition">FAQ</a>
@@ -176,6 +195,67 @@
         </div>
     </section>
 
+    <!-- ADDED: Pricing section (single source of truth = SITE_CONFIG.prices in assets/site-config.js) -->
+    <section id="pricing" class="py-20 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">PRICING</div>
+                <h2 class="text-6xl font-semibold tracking-tight">Straight numbers.<br>No bloated packages.</h2>
+                <!-- JESSE: confirm price — the $1,500 below is rendered from SITE_CONFIG.prices.sprint -->
+                <p class="mt-6 text-lg text-white/70 max-w-2xl mx-auto">Every project starts at <strong class="text-white" data-price="sprint">$1,500</strong>. Pick the package that fits — or book a free call and get a straight quote for your specific project.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 items-stretch">
+                <!-- Lead-Gen Sprint -->
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal flex flex-col">
+                    <h3 class="text-2xl font-semibold tracking-tight mb-1">Lead-Gen Sprint</h3>
+                    <p class="text-white/50 text-sm mb-6">One page. Built to convert.</p>
+                    <!-- JESSE: confirm price -->
+                    <div class="text-5xl font-semibold tracking-tight mb-6"><span data-price="sprint">$1,500</span></div>
+                    <ul class="text-white/70 text-sm space-y-3 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>One high-converting landing page</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Conversion copy polish</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Mobile-first, loads fast</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Lead capture form + confirmation</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Live in 1–2 weeks</li>
+                    </ul>
+                    <a href="#contact" class="glass text-center px-8 py-4 rounded-2xl font-bold hover:bg-white/15 transition">Start with a free call</a>
+                </div>
+                <!-- AI Lead Engine (most popular) -->
+                <div class="modern-card rounded-3xl p-8 border border-[#D4AF37]/60 reveal flex flex-col relative" style="background: rgba(212,175,55,.06); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); box-shadow: 0 0 40px rgba(212,175,55,.15);">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 text-xs font-bold tracking-[2px] bg-[#D4AF37] text-black px-5 py-1.5 rounded-full">MOST POPULAR</div>
+                    <h3 class="text-2xl font-semibold tracking-tight mb-1">AI Lead Engine</h3>
+                    <p class="text-white/50 text-sm mb-6">Your site, working while you sleep.</p>
+                    <!-- JESSE: confirm price -->
+                    <div class="text-5xl font-semibold tracking-tight mb-6 text-gold"><span data-price="engine">$3,500</span></div>
+                    <ul class="text-white/70 text-sm space-y-3 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Everything in Lead-Gen Sprint</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>AI chatbot trained on your business</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Automated follow-up sequences</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Instant lead alerts to your inbox</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Conversion tracking installed</li>
+                    </ul>
+                    <a href="#contact" class="glow-gold text-center bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Start with a free call</a>
+                </div>
+                <!-- Premium Build -->
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal flex flex-col">
+                    <h3 class="text-2xl font-semibold tracking-tight mb-1">Premium Build</h3>
+                    <p class="text-white/50 text-sm mb-6">The full flagship site.</p>
+                    <!-- JESSE: confirm price -->
+                    <div class="text-5xl font-semibold tracking-tight mb-6"><span data-price="premium">$6,000</span></div>
+                    <ul class="text-white/70 text-sm space-y-3 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Everything in AI Lead Engine</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Full multi-page premium design</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Custom AI tools &amp; automation</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Copywriting done for you</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>30 days post-launch support</li>
+                    </ul>
+                    <a href="#contact" class="glass text-center px-8 py-4 rounded-2xl font-bold hover:bg-white/15 transition">Start with a free call</a>
+                </div>
+            </div>
+            <p class="text-center text-white/40 text-sm mt-10 reveal">Need something custom? Every project is scoped to your goals — <a href="#contact" class="text-gold underline-offset-4 hover:underline">book the free call</a> for a straight number.</p>
+        </div>
+    </section>
+
     <!-- Work (UNCHANGED) -->
     <section id="work" class="py-20 border-t border-white/10 bg-black">
         <div class="max-w-5xl mx-auto px-6">
@@ -203,6 +283,43 @@
         </div>
     </section>
 
+    <!-- ADDED: Free checklist lead capture (posts to SITE_CONFIG.emailEndpoint, fires generate_lead) -->
+    <section id="checklist" class="py-20 border-t border-white/10 bg-black">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3 reveal">FREE DOWNLOAD</div>
+            <h2 class="text-5xl md:text-6xl font-semibold tracking-tight mb-5 reveal">The 44-Point Website<br>Conversion Checklist</h2>
+            <p class="text-lg text-white/70 mb-8 reveal">The exact audit I run on client sites before I touch a pixel — condensed into a 20-minute self-check.</p>
+            <ul class="text-left max-w-xl mx-auto text-white/70 space-y-3 mb-10 reveal">
+                <li class="flex gap-3"><i class="fas fa-check-circle text-gold mt-1"></i><span><strong class="text-white">Find the leaks</strong> costing you leads, section by section.</span></li>
+                <li class="flex gap-3"><i class="fas fa-check-circle text-gold mt-1"></i><span><strong class="text-white">Fixes ranked by impact</strong> — not opinion, not guesswork.</span></li>
+                <li class="flex gap-3"><i class="fas fa-check-circle text-gold mt-1"></i><span><strong class="text-white">20 minutes, no tech skills</strong> — check the boxes, get your score.</span></li>
+            </ul>
+            <div id="checklist-form-wrap" class="glass-dark rounded-3xl p-8 md:p-10 border border-white/10 reveal">
+                <form id="checklist-form" novalidate>
+                    <div class="grid sm:grid-cols-2 gap-4 mb-4 text-left">
+                        <div>
+                            <label for="cl-name" class="block text-sm text-white/60 mb-2">Name</label>
+                            <input id="cl-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" class="w-full bg-white/5 border border-white/15 rounded-2xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] transition">
+                        </div>
+                        <div>
+                            <label for="cl-email" class="block text-sm text-white/60 mb-2">Email</label>
+                            <input id="cl-email" name="email" type="email" autocomplete="email" required placeholder="jane@company.com" class="w-full bg-white/5 border border-white/15 rounded-2xl px-5 py-4 text-white placeholder-white/30 focus:outline-none focus:border-[#D4AF37] transition">
+                        </div>
+                    </div>
+                    <p id="checklist-error" class="hidden text-red-400 text-sm mb-4"></p>
+                    <button type="submit" class="glow-gold w-full bg-white text-black px-8 py-5 rounded-2xl font-bold text-lg hover:bg-[#D4AF37] transition">Send me the checklist</button>
+                    <p class="text-xs text-white/40 mt-4">No spam. Unsubscribe anytime.</p>
+                </form>
+            </div>
+            <div id="checklist-success" class="hidden glass-dark rounded-3xl p-10 border border-[#D4AF37]/40">
+                <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-[#D4AF37]/15 flex items-center justify-center"><i class="fas fa-check text-gold text-2xl"></i></div>
+                <h3 class="text-3xl font-semibold tracking-tight mb-3">You're in. Check your inbox.</h3>
+                <p data-delivery-note class="text-white/60 mb-8">Your 44-point checklist is on its way — the first email has your download link.</p>
+                <a data-checklist-link href="free-checklist.html" class="glow-gold inline-flex bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Open the checklist now</a>
+            </div>
+        </div>
+    </section>
+
     <!-- ADDED: Digital Products section (cross-sell the Cashflow OS) -->
     <section id="products" class="py-20 border-t border-white/10">
         <div class="max-w-5xl mx-auto px-6">
@@ -222,7 +339,7 @@
                             <li><i class="fas fa-check text-gold mr-2"></i>30% tax set-aside handled automatically</li>
                             <li><i class="fas fa-check text-gold mr-2"></i>Overdue invoices turn red — with scripts to chase them</li>
                         </ul>
-                        <a href="#" class="glow-gold inline-flex bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get it — $24 <span class="ml-2 text-black/50 line-through font-medium">$39 value</span></a>
+                        <a href="#" data-track="begin_checkout" class="glow-gold inline-flex bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get it — $24 <span class="ml-2 text-black/50 line-through font-medium">$39 value</span></a>
                         <p class="mt-4 text-xs text-white/40">↑ </p>
                     </div>
                     <div>
@@ -247,7 +364,7 @@
                 </details>
                 <details class="glass-dark rounded-2xl border border-white/10 p-6 group">
                     <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">What does a project cost? <i class="fas fa-chevron-down text-gold group-open:rotate-180 transition"></i></summary>
-                    <p class="mt-4 text-white/60">Every project is scoped to your goals — no bloated packages. Book the free call and you'll get a straight number, fast.</p>
+                    <p class="mt-4 text-white/60">Projects start at $1,500 — see the <a href="#pricing" class="text-gold underline-offset-4 hover:underline">pricing section</a> for the three packages. Book the free call and you'll get a straight number for your specific project, fast.</p>
                 </details>
                 <details class="glass-dark rounded-2xl border border-white/10 p-6 group">
                     <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">What are "AI-powered features"? <i class="fas fa-chevron-down text-gold group-open:rotate-180 transition"></i></summary>
@@ -266,7 +383,7 @@
         <div class="max-w-2xl mx-auto px-6 text-center">
             <h2 class="text-6xl font-semibold tracking-tight mb-6">Ready to build<br>something that works?</h2>
             <p class="text-xl text-white/70 mb-10">Let's create a modern site that brings in the right clients.</p>
-            <a href="https://calendly.com/" target="_blank" class="glow-gold inline-flex items-center justify-center bg-white text-black px-14 py-6 rounded-3xl font-bold text-xl hover:bg-[#D4AF37] transition">Book Free Strategy Call</a>
+            <a href="https://calendly.com/" data-calendly data-track="book_call" data-location="contact" target="_blank" class="glow-gold inline-flex items-center justify-center bg-white text-black px-14 py-6 rounded-3xl font-bold text-xl hover:bg-[#D4AF37] transition">Book Free Strategy Call</a>
             <p class="mt-6 text-white/50">Prefer email? <a href="/cdn-cgi/l/email-protection#721b1c141d3218101b08080517101617045c111d1f" class="text-gold underline-offset-4 hover:underline"><span class="__cf_email__" data-cfemail="cea7a0a8a18ea4aca7b4b4b9abacaaabb8e0ada1a3">[email&#160;protected]</span></a></p>
             <p class="mt-8 text-sm text-white/50">Florida-based • Working with clients nationwide</p>
         </div>
@@ -294,5 +411,7 @@
         }), { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     </script>
+    <!-- ADDED: conversion fixes — config-driven behavior, tracking, lazy chatbot -->
+    <script src="assets/site.js"></script>
 </body>
 </html>
