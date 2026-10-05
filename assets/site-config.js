@@ -18,7 +18,7 @@ window.SITE_CONFIG = {
        • ConvertKit → create a form, use its "action" URL
        • Mailchimp  → use its embedded-form POST URL
      See SETUP.md for exactly where to find these URLs. */
-  emailEndpoint: "https://example.com/REPLACE-ME",
+  emailEndpoint: "https://formspree.io/f/xqezwqrw",
 
   /* ---- Google Analytics 4 ------------------------------------------------
      Your GA4 "Measurement ID" — looks like G-XXXXXXXXXX.
