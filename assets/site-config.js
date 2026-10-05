@@ -38,9 +38,9 @@ window.SITE_CONFIG = {
      <!-- JESSE: confirm price --> — change a number here and every price
      on the site (pricing section, chatbot answers) updates automatically. */
   prices: {
-    sprint: 1500,    // Lead-Gen Sprint   <!-- JESSE: confirm price -->
-    engine: 3500,    // AI Lead Engine    <!-- JESSE: confirm price -->
-    premium: 6000    // Premium Build     <!-- JESSE: confirm price -->
+    sprint: 997,     // Lead-Gen Sprint
+    engine: 1997,    // AI Lead Engine
+    premium: 2997    // Premium Build
   },
 
   /* ---- Misc -------------------------------------------------------------- */
