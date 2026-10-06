@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Lumière — The Art of Radiance | Luxury Med Spa, Palm Beach</title>
+<meta name="description" content="Maison Lumière is a luxury medical spa on Worth Avenue, Palm Beach. Skin, injectables, body rituals — quiet, confident, uncompromising.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --parchment:#F2EFE9;
+  --parchment-deep:#EAE5D9;
+  --espresso:#1c1917;
+  --espresso-soft:#3a352f;
+  --gold:#a48e5e;
+  --gold-soft:#c4b088;
+  --hairline:rgba(28,25,23,.14);
+  --hairline-strong:rgba(28,25,23,.28);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Jost",Helvetica,Arial,sans-serif;
+  --gutter:clamp(1.5rem,6vw,6rem);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+/* ============ RESET / BASE ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html.reduced-motion{scroll-behavior:auto}
+body{
+  background:var(--parchment);
+  color:var(--espresso);
+  font-family:var(--sans);
+  font-weight:300;
+  font-size:1.0625rem;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--gold);color:var(--parchment)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+/* film grain */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2000;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+/* ============ TYPOGRAPHIC UTILITIES ============ */
+.display{font-family:var(--serif);font-weight:300;line-height:1.02;letter-spacing:-.01em}
+.display em{font-style:italic;font-weight:400;color:var(--gold)}
+.label{
+  font-family:var(--sans);font-weight:400;font-size:10px;letter-spacing:.35em;
+  text-transform:uppercase;color:var(--gold);
+}
+.label-dark{color:var(--espresso-soft)}
+.rule{height:1px;background:var(--hairline);border:0}
+.wrap{max-width:1400px;margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.section{padding:clamp(5rem,10vw,9rem) 0}
+.sec-head{display:flex;align-items:baseline;gap:1.5rem;margin-bottom:clamp(2.5rem,5vw,4.5rem)}
+.sec-head .num{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--gold)}
+.sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,4.5vw,3.6rem);line-height:1.1}
+.sec-head .rule{flex:1;align-self:center}
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.12s}.reveal-d2{transition-delay:.24s}.reveal-d3{transition-delay:.36s}
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.25rem var(--gutter);
+  border-bottom:1px solid var(--hairline);
+  background:rgba(242,239,233,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:padding .4s var(--ease);
+}
+.nav.scrolled{padding:.85rem var(--gutter)}
+.wordmark{font-family:var(--serif);font-size:1.45rem;letter-spacing:.14em;font-weight:400}
+.wordmark span{color:var(--gold)}
+.nav-links{display:flex;gap:2.25rem;align-items:center}
+.nav-links a{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;position:relative;padding:.25rem 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .4s var(--ease)}
+.nav-links a:hover::after{width:100%}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.75rem;
+  font-family:var(--sans);font-weight:400;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;
+  padding:1rem 2.25rem;border:1px solid var(--espresso);color:var(--espresso);
+  transition:background .45s var(--ease),color .45s var(--ease),border-color .45s;
+}
+.btn:hover{background:var(--espresso);color:var(--parchment)}
+.btn-gold{border-color:var(--gold);color:var(--espresso)}
+.btn-gold:hover{background:var(--gold);border-color:var(--gold);color:var(--parchment)}
+.btn-sm{padding:.7rem 1.6rem}
+/* ============ HERO ============ */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;padding-top:7rem;overflow:hidden}
+.hero-inner{position:relative;z-index:2}
+.hero .label{margin-bottom:1.75rem;display:block}
+.hero h1{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(4rem,11vw,10rem);line-height:.98;letter-spacing:-.015em;
+  max-width:12ch;
+}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--gold)}
+.hero-sub{max-width:44ch;margin-top:2.25rem;font-size:1.125rem;color:var(--espresso-soft)}
+.hero-cta{margin-top:3rem;display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center}
+.hero-note{margin-top:3.5rem;display:flex;gap:3rem;flex-wrap:wrap}
+.hero-note div .label{margin-bottom:.4rem}
+.hero-note div p{font-size:.95rem;color:var(--espresso-soft)}
+/* hero visual — pure CSS composition */
+.hero-visual{position:absolute;top:8%;right:-6%;width:min(52vw,720px);aspect-ratio:1;z-index:1;pointer-events:none}
+.wash{position:absolute;border-radius:50%;filter:blur(70px)}
+.wash-1{width:70%;height:70%;left:15%;top:12%;background:radial-gradient(circle,rgba(164,142,94,.34),transparent 70%)}
+.wash-2{width:46%;height:46%;right:8%;bottom:6%;background:radial-gradient(circle,rgba(164,142,94,.22),transparent 70%)}
+.arc{position:absolute;border:1px solid rgba(164,142,94,.55);border-radius:50%}
+.arc-1{width:88%;height:88%;left:6%;top:6%}
+.arc-2{width:64%;height:64%;left:18%;top:18%;border-color:rgba(164,142,94,.35)}
+.arc-3{width:40%;height:40%;left:30%;top:30%;border-color:rgba(28,25,23,.18)}
+.orb{
+  position:absolute;width:26%;height:26%;left:37%;top:37%;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#e9e2d2,#c9bfa8 55%,#a48e5e 100%);
+  box-shadow:0 30px 80px rgba(28,25,23,.18),inset -18px -24px 60px rgba(28,25,23,.22);
+}
+.scroll-cue{position:absolute;bottom:2.5rem;left:var(--gutter);display:flex;align-items:center;gap:1rem;z-index:2}
+.scroll-cue .line{width:1px;height:56px;background:var(--hairline-strong);position:relative;overflow:hidden}
+.scroll-cue .line::after{content:"";position:absolute;top:-40%;left:0;width:100%;height:40%;background:var(--gold);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+/* ============ MARQUEE ============ */
+.marquee{border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);overflow:hidden;padding:1.6rem 0;background:var(--parchment-deep)}
+.marquee-track{display:flex;gap:4rem;width:max-content;animation:marq 46s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--serif);font-style:italic;font-size:1.9rem;font-weight:300;white-space:nowrap;color:var(--espresso-soft)}
+.marquee-track span i{font-style:normal;color:var(--gold);margin-right:4rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* ============ PHILOSOPHY ============ */
+.philo-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,6vw,6rem);align-items:start}
+.dropcap::first-letter{
+  font-family:var(--serif);font-size:4.6em;float:left;line-height:.82;
+  padding:.06em .14em 0 0;color:var(--gold);font-weight:400;
+}
+.philo-copy p+p{margin-top:1.5rem}
+.pull{border-left:1px solid var(--gold);padding:1.5rem 0 1.5rem 2.25rem;margin:2.75rem 0}
+.pull p{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.4;font-weight:300}
+.pull cite{display:block;margin-top:1rem;font-style:normal;font-family:var(--sans);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.philo-side{position:sticky;top:8rem}
+.stat{border-top:1px solid var(--hairline);padding:1.6rem 0;display:flex;justify-content:space-between;align-items:baseline}
+.stat:last-child{border-bottom:1px solid var(--hairline)}
+.stat b{font-family:var(--serif);font-weight:400;font-size:2.6rem;color:var(--espresso)}
+.stat span{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--espresso-soft)}
+</style>
+
+<style>
+/* ============ TREATMENT MENU ============ */
+.menu-sec{background:var(--espresso);color:var(--parchment);position:relative}
+.menu-sec .sec-head h2{color:var(--parchment)}
+.menu-sec .rule{background:rgba(242,239,233,.16)}
+.menu-sec .num{color:var(--gold-soft)}
+.chips{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.chip{
+  font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;font-weight:400;
+  padding:.85rem 1.9rem;border:1px solid rgba(242,239,233,.28);color:var(--parchment);
+  border-radius:999px;transition:all .4s var(--ease);
+}
+.chip:hover{border-color:var(--gold)}
+.chip.active{background:var(--gold);border-color:var(--gold);color:var(--espresso)}
+.menu-list{border-top:1px solid rgba(242,239,233,.16)}
+.treatment{
+  display:grid;grid-template-columns:1fr auto;gap:.4rem 2rem;align-items:baseline;
+  padding:1.9rem .5rem;border-bottom:1px solid rgba(242,239,233,.16);
+  transition:opacity .5s var(--ease),transform .5s var(--ease),background .4s;
+}
+.treatment:hover{background:rgba(164,142,94,.06)}
+.treatment.hide{display:none}
+.treatment.fade{opacity:0;transform:translateY(14px)}
+.treatment .t-name{font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,2rem);font-weight:400}
+.treatment .t-name small{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.35rem;font-weight:400}
+.treatment .t-desc{grid-column:1;color:rgba(242,239,233,.62);max-width:58ch;font-size:.98rem}
+.treatment .t-meta{grid-column:2;grid-row:1;text-align:right;white-space:nowrap}
+.treatment .t-price{font-family:var(--serif);font-size:1.5rem;color:var(--gold-soft)}
+.treatment .t-dur{display:block;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(242,239,233,.5);margin-top:.25rem}
+.treatment .t-book{
+  grid-column:2;grid-row:2;justify-self:end;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--gold-soft);border-bottom:1px solid var(--gold-soft);padding-bottom:.2rem;transition:color .3s,border-color .3s;
+}
+.treatment .t-book:hover{color:var(--parchment);border-color:var(--parchment)}
+.menu-note{margin-top:2.5rem;color:rgba(242,239,233,.5);font-size:.9rem;max-width:62ch}
+.menu-note a{color:var(--gold-soft);border-bottom:1px solid var(--gold-soft)}
+/* ============ RITUAL SPOTLIGHT ============ */
+.ritual-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,6rem);align-items:start}
+.ritual-visual{position:sticky;top:7rem;height:min(78vh,640px);border:1px solid var(--hairline);overflow:hidden;background:var(--parchment-deep)}
+.rv-scene{position:absolute;inset:0}
+.rv-orb{
+  position:absolute;width:52%;aspect-ratio:1;left:24%;top:16%;border-radius:50%;
+  background:radial-gradient(circle at 36% 30%,#f4efe3,#d9cfb6 55%,#a48e5e 100%);
+  box-shadow:0 40px 90px rgba(28,25,23,.16),inset -22px -30px 70px rgba(28,25,23,.2);
+  transition:transform 1.2s var(--ease);
+}
+.rv-ring{position:absolute;border:1px solid rgba(164,142,94,.5);border-radius:50%;transition:transform 1.2s var(--ease)}
+.rv-ring.r1{width:74%;aspect-ratio:1;left:13%;top:6%}
+.rv-ring.r2{width:96%;aspect-ratio:1;left:2%;top:-4%;border-color:rgba(28,25,23,.14)}
+.rv-caption{position:absolute;bottom:0;left:0;right:0;padding:1.6rem 2rem;border-top:1px solid var(--hairline);background:rgba(242,239,233,.7);backdrop-filter:blur(6px)}
+.rv-caption .label{margin-bottom:.3rem}
+.rv-caption p{font-family:var(--serif);font-style:italic;font-size:1.25rem}
+.step{padding:2.6rem 0;border-bottom:1px solid var(--hairline);opacity:.32;transform:translateX(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.step.lit{opacity:1;transform:none}
+.step .s-num{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1rem;letter-spacing:.2em}
+.step h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,3vw,2.4rem);margin:.6rem 0 .8rem}
+.step p{color:var(--espresso-soft);max-width:52ch}
+.step .s-time{display:inline-block;margin-top:1rem;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+/* ============ TESTIMONIALS ============ */
+.testi-sec{background:var(--parchment-deep);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2rem,4vw,4rem)}
+.testi{padding:0 0 0 2rem;border-left:1px solid var(--gold)}
+.testi blockquote{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.55;font-weight:300}
+.testi footer{margin-top:1.5rem;display:flex;align-items:center;gap:1rem}
+.initials{
+  width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:1.05rem;color:var(--gold);flex-shrink:0;
+}
+.testi footer div span{display:block;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--espresso-soft)}
+.testi footer div span:last-child{color:var(--gold);margin-top:.2rem}
+/* ============ MEMBERSHIP ============ */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:stretch}
+.tier{
+  border:1px solid var(--hairline);padding:3rem 2.5rem;display:flex;flex-direction:column;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;
+  background:var(--parchment);
+}
+.tier:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(28,25,23,.1);border-color:var(--gold)}
+.tier.featured{background:var(--espresso);color:var(--parchment);border-color:var(--espresso)}
+.tier.featured .tier-desc{color:rgba(242,239,233,.65)}
+.tier.featured li{color:rgba(242,239,233,.8);border-color:rgba(242,239,233,.16)}
+.tier.featured .btn{border-color:var(--gold);color:var(--parchment)}
+.tier.featured .btn:hover{background:var(--gold);color:var(--espresso)}
+.tier .label{margin-bottom:1.2rem}
+.tier h3{font-family:var(--serif);font-weight:400;font-size:2.2rem}
+.tier .price{font-family:var(--serif);font-size:3rem;margin:1rem 0 .4rem}
+.tier .price small{font-family:var(--sans);font-size:.75rem;letter-spacing:.2em;color:var(--gold)}
+.tier-desc{font-size:.95rem;color:var(--espresso-soft);margin-bottom:1.8rem}
+.tier ul{list-style:none;margin-bottom:2.5rem;flex:1}
+.tier li{padding:.85rem 0;border-top:1px solid var(--hairline);font-size:.95rem;color:var(--espresso-soft)}
+.tier li:last-child{border-bottom:1px solid var(--hairline)}
+.tier .btn{width:100%}
+/* ============ BOOKING ============ */
+.book-sec{background:var(--espresso);color:var(--parchment)}
+.book-sec .sec-head h2{color:var(--parchment)}
+.book-sec .rule{background:rgba(242,239,233,.16)}
+.book-shell{max-width:880px;margin:0 auto;border:1px solid rgba(242,239,233,.2);padding:clamp(2rem,5vw,4rem);background:rgba(242,239,233,.03)}
+.progress{display:flex;gap:0;margin-bottom:3rem;border-bottom:1px solid rgba(242,239,233,.16);padding-bottom:1.5rem}
+.p-step{flex:1;text-align:center;position:relative;opacity:.35;transition:opacity .4s}
+.p-step.on{opacity:1}
+.p-step .p-num{font-family:var(--serif);font-style:italic;color:var(--gold-soft);font-size:1rem}
+.p-step .p-name{display:block;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;margin-top:.35rem}
+.b-step{display:none}
+.b-step.on{display:block;animation:stepIn .6s var(--ease)}
+@keyframes stepIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.b-step h3{font-family:var(--serif);font-weight:400;font-size:1.9rem;margin-bottom:1.8rem}
+.opt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+.opt{
+  text-align:left;border:1px solid rgba(242,239,233,.24);padding:1.2rem 1.4rem;color:var(--parchment);
+  transition:all .35s var(--ease);display:flex;justify-content:space-between;align-items:center;gap:1rem;
+}
+.opt:hover{border-color:var(--gold)}
+.opt.sel{background:var(--gold);border-color:var(--gold);color:var(--espresso)}
+.opt .o-name{font-family:var(--serif);font-size:1.25rem}
+.opt .o-sub{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-top:.2rem}
+.chip-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.6rem}
+.day-chip,.time-chip{
+  font-size:.8rem;letter-spacing:.14em;padding:.8rem 1.3rem;border:1px solid rgba(242,239,233,.24);
+  color:var(--parchment);transition:all .3s var(--ease);text-transform:uppercase;
+}
+.day-chip small{display:block;font-size:.62rem;opacity:.6;letter-spacing:.24em}
+.day-chip:hover,.time-chip:hover{border-color:var(--gold)}
+.day-chip.sel,.time-chip.sel{background:var(--parchment);color:var(--espresso);border-color:var(--parchment)}
+.b-label{display:block;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);margin:1.8rem 0 .8rem}
+.field{margin-bottom:1.4rem}
+.field label{display:block;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.55rem}
+.field input,.field textarea{
+  width:100%;background:transparent;border:1px solid rgba(242,239,233,.28);color:var(--parchment);
+  font-family:var(--sans);font-weight:300;font-size:1rem;padding:.95rem 1.1rem;transition:border-color .3s;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.b-nav{display:flex;justify-content:space-between;margin-top:2.5rem;gap:1rem}
+.b-back{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(242,239,233,.6);border-bottom:1px solid rgba(242,239,233,.3);padding-bottom:.25rem}
+.b-back:hover{color:var(--parchment)}
+.confirm{text-align:center;padding:2rem 0}
+.confirm .seal{
+  width:110px;height:110px;margin:0 auto 2rem;border:1px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+}
+.confirm .seal span{font-family:var(--serif);font-style:italic;font-size:2rem;color:var(--gold-soft)}
+.confirm h3{font-family:var(--serif);font-weight:400;font-size:2.4rem;margin-bottom:1rem}
+.confirm p{color:rgba(242,239,233,.65);max-width:46ch;margin:0 auto 1rem}
+.confirm .ref{display:inline-block;margin-top:1rem;font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(164,142,94,.5);padding:.8rem 1.6rem}
+.b-error{color:#d98f7e;font-size:.85rem;margin-top:1rem;letter-spacing:.06em;display:none}
+.b-error.show{display:block}
+/* ============ VISIT / FAQ ============ */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,6rem)}
+.visit-block{border-top:1px solid var(--hairline);padding:1.8rem 0}
+.visit-block:last-child{border-bottom:1px solid var(--hairline)}
+.visit-block h4{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;font-weight:400}
+.visit-block p{color:var(--espresso-soft)}
+.visit-block a{border-bottom:1px solid var(--gold);transition:color .3s}
+.visit-block a:hover{color:var(--gold)}
+.faq-item{border-top:1px solid var(--hairline)}
+.faq-item:last-child{border-bottom:1px solid var(--hairline)}
+.faq-q{
+  width:100%;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
+  padding:1.7rem .25rem;text-align:left;font-family:var(--serif);font-size:1.35rem;font-weight:400;
+}
+.faq-q .pm{font-family:var(--sans);font-weight:300;font-size:1.6rem;color:var(--gold);transition:transform .45s var(--ease);flex-shrink:0}
+.faq-item.open .faq-q .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .6s var(--ease)}
+.faq-a p{padding:0 .25rem 1.8rem;color:var(--espresso-soft);max-width:60ch}
+/* ============ FOOTER ============ */
+footer{background:var(--espresso);color:var(--parchment);padding:5rem 0 2.5rem;overflow:hidden}
+.foot-word{font-family:var(--serif);font-weight:300;font-size:clamp(3.4rem,10vw,9rem);line-height:1;letter-spacing:.02em;white-space:nowrap}
+.foot-word span{color:var(--gold-soft);font-style:italic}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin:3.5rem 0;padding:2.5rem 0;border-top:1px solid rgba(242,239,233,.16);border-bottom:1px solid rgba(242,239,233,.16)}
+.foot-grid h5{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1.1rem;font-weight:400}
+.foot-grid p,.foot-grid a{color:rgba(242,239,233,.62);font-size:.95rem;display:block;margin-bottom:.45rem}
+.foot-grid a:hover{color:var(--parchment)}
+.foot-base{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,239,233,.4)}
+/* ============ RESPONSIVE ============ */
+@media(max-width:1020px){
+  .nav-links a{display:none}
+  .philo-grid,.ritual-grid,.visit-grid{grid-template-columns:1fr}
+  .philo-side{position:static}
+  .ritual-visual{position:relative;top:0;height:60vh}
+  .testi-grid,.tiers{grid-template-columns:1fr}
+  .tier.featured{order:-1}
+  .treatment{grid-template-columns:1fr}
+  .treatment .t-meta{grid-column:1;grid-row:2;text-align:left;display:flex;gap:1.2rem;align-items:baseline}
+  .treatment .t-dur{margin-top:0}
+  .treatment .t-book{grid-column:1;grid-row:4;justify-self:start;margin-top:.6rem}
+  .treatment .t-desc{grid-row:3}
+  .field-row{grid-template-columns:1fr}
+  .opt-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="wordmark">MAISON <span>LUMIÈRE</span></a>
+  <div class="nav-links">
+    <a href="#philosophy">Philosophy</a>
+    <a href="#menu">Treatments</a>
+    <a href="#ritual">Ritual</a>
+    <a href="#membership">Membership</a>
+    <a href="#visit">Visit</a>
+  </div>
+  <a href="#booking" class="btn btn-sm">Reserve</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-visual" id="heroVisual" aria-hidden="true">
+    <div class="wash wash-1"></div>
+    <div class="wash wash-2"></div>
+    <div class="arc arc-1"></div>
+    <div class="arc arc-2"></div>
+    <div class="arc arc-3"></div>
+    <div class="orb"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="label reveal">Medical Spa — Worth Avenue, Palm Beach</span>
+    <h1 class="reveal reveal-d1">The Art<br>of <em>Radiance.</em></h1>
+    <p class="hero-sub reveal reveal-d2">A quiet sanctuary where clinical precision meets ceremony. Every treatment begins with listening — and ends with you, luminous.</p>
+    <div class="hero-cta reveal reveal-d3">
+      <a href="#booking" class="btn btn-gold">Reserve a Ritual</a>
+      <a href="#menu" class="btn">Explore Treatments</a>
+    </div>
+    <div class="hero-note reveal reveal-d3">
+      <div><span class="label label-dark">Est.</span><p>2016</p></div>
+      <div><span class="label label-dark">Physician-led</span><p>Every protocol overseen by our medical director</p></div>
+      <div><span class="label label-dark">Private</span><p>Twelve suites. Never crowded, never rushed</p></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <div class="line"></div>
+    <span class="label label-dark">Scroll</span>
+  </div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>The Lumière Facial <i>·</i></span><span>Hammam Glow <i>·</i></span><span>Botox &amp; Dysport <i>·</i></span><span>Dermal Fillers <i>·</i></span><span>Lymphatic Sculpt <i>·</i></span><span>Golden Hour Ritual <i>·</i></span><span>OxyGeneo Renewal <i>·</i></span><span>Bridal Radiance <i>·</i></span>
+  </div>
+</div>
+
+<!-- ============ 01 PHILOSOPHY ============ -->
+<section class="section" id="philosophy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">01</span><h2>Philosophy</h2><hr class="rule">
+      <span class="label">Our Belief</span>
+    </div>
+    <div class="philo-grid">
+      <div class="philo-copy reveal">
+        <p class="dropcap">We believe radiance is not applied — it is revealed. Beneath every complexion is an architecture of light waiting to be uncovered, and our work is closer to restoration than to decoration. No trends chased, no faces standardized, no one rushed through a door.</p>
+        <p>Each guest begins with an unhurried consultation: a study of skin, structure, and intention. From there, our physicians and aestheticians compose a protocol the way a perfumer composes a scent — in layers, with restraint, and entirely around you.</p>
+        <div class="pull">
+          <p>"We do not change faces here. We return them — to their clearest, calmest, most luminous selves."</p>
+          <cite>Dr. Camille Aubert — Founder &amp; Medical Director</cite>
+        </div>
+        <p>Twelve private suites. Hospital-grade sterilization behind unmarked doors. Linens pressed daily, tea poured without asking, and silence treated as a luxury good. This is the maison standard — invisible, until you notice everything.</p>
+      </div>
+      <aside class="philo-side reveal reveal-d1">
+        <div class="stat"><b>12</b><span>Private Suites</span></div>
+        <div class="stat"><b>9<span style="font-size:1.4rem"> yrs</span></b><span>Of Quiet Practice</span></div>
+        <div class="stat"><b>4.9</b><span>Average Guest Rating</span></div>
+        <div class="stat"><b>100%</b><span>Physician Oversight</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 TREATMENT MENU ============ -->
+<section class="section menu-sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">02</span><h2>The Treatment Menu</h2><hr class="rule">
+      <span class="label">Skin · Injectables · Body · Rituals</span>
+    </div>
+    <div class="chips reveal" role="tablist" aria-label="Filter treatments">
+      <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="chip" data-filter="skin" role="tab" aria-selected="false">Skin</button>
+      <button class="chip" data-filter="injectables" role="tab" aria-selected="false">Injectables</button>
+      <button class="chip" data-filter="body" role="tab" aria-selected="false">Body</button>
+      <button class="chip" data-filter="rituals" role="tab" aria-selected="false">Rituals</button>
+    </div>
+    <div class="menu-list reveal" id="menuList">
+      <article class="treatment" data-cat="skin">
+        <h3 class="t-name"><small>Skin</small>The Lumière Facial</h3>
+        <div class="t-meta"><span class="t-price">$295</span><span class="t-dur">90 min</span></div>
+        <p class="t-desc">Our signature. Nine steps of cleanse, sculpt, and light — finished with a 24k gold leaf mask and LED sealing. The facial other facials are measured against.</p>
+        <button class="t-book" data-treatment="The Lumière Facial">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="skin">
+        <h3 class="t-name"><small>Skin</small>HydraGlow Facial</h3>
+        <div class="t-meta"><span class="t-price">$185</span><span class="t-dur">60 min</span></div>
+        <p class="t-desc">Vortex hydration infusion paired with lymphatic sculpting massage. Instant plump, glass-skin finish — the red-carpet standby.</p>
+        <button class="t-book" data-treatment="HydraGlow Facial">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="skin">
+        <h3 class="t-name"><small>Skin</small>OxyGeneo Renewal</h3>
+        <div class="t-meta"><span class="t-price">$165</span><span class="t-dur">45 min</span></div>
+        <p class="t-desc">Oxygenation from within: CO2 micro-bubbles trigger the Bohr effect while ultrasound drives nutrients deep. Zero downtime, lit-from-within glow.</p>
+        <button class="t-book" data-treatment="OxyGeneo Renewal">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="skin">
+        <h3 class="t-name"><small>Skin</small>Chemical Renewal Peel</h3>
+        <div class="t-meta"><span class="t-price">$210</span><span class="t-dur">60 min</span></div>
+        <p class="t-desc">A physician-graded resurfacing protocol calibrated to your Fitzpatrick type. Dullness, congestion, and fine lines — dissolved, not scrubbed.</p>
+        <button class="t-book" data-treatment="Chemical Renewal Peel">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="skin">
+        <h3 class="t-name"><small>Skin</small>Dermaplaning Ritual</h3>
+        <div class="t-meta"><span class="t-price">$120</span><span class="t-dur">45 min</span></div>
+        <p class="t-desc">Surgical-grade exfoliation removes vellus hair and dead cell buildup, finished with a peptide veil. Makeup will never sit better.</p>
+        <button class="t-book" data-treatment="Dermaplaning Ritual">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="injectables">
+        <h3 class="t-name"><small>Injectables</small>Botox &amp; Dysport</h3>
+        <div class="t-meta"><span class="t-price">from $12<span style="font-size:.9rem">/unit</span></span><span class="t-dur">30 min</span></div>
+        <p class="t-desc">Micro-dosed neuromodulator artistry. We soften expression lines while preserving every bit of your expression — frozen is a failure here.</p>
+        <button class="t-book" data-treatment="Botox & Dysport">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="injectables">
+        <h3 class="t-name"><small>Injectables</small>Dermal Fillers</h3>
+        <div class="t-meta"><span class="t-price">from $650<span style="font-size:.9rem">/syringe</span></span><span class="t-dur">45 min</span></div>
+        <p class="t-desc">Structural restoration with hyaluronic artistry — cheeks, jawline, temples, under-eyes. Mapped to your bone structure, never templated.</p>
+        <button class="t-book" data-treatment="Dermal Fillers">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="injectables">
+        <h3 class="t-name"><small>Injectables</small>Lip Refinement</h3>
+        <div class="t-meta"><span class="t-price">$550</span><span class="t-dur">45 min</span></div>
+        <p class="t-desc">Border definition, symmetry, and quiet volume. The brief is always the same: lips that look like yours, on your best day.</p>
+        <button class="t-book" data-treatment="Lip Refinement">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="injectables">
+        <h3 class="t-name"><small>Injectables</small>Sculptra</h3>
+        <div class="t-meta"><span class="t-price">from $800<span style="font-size:.9rem">/vial</span></span><span class="t-dur">60 min</span></div>
+        <p class="t-desc">Biostimulation that rebuilds your own collagen over months. The long game of injectables — gradual, structural, unmistakably natural.</p>
+        <button class="t-book" data-treatment="Sculptra">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="body">
+        <h3 class="t-name"><small>Body</small>Lymphatic Sculpt Massage</h3>
+        <div class="t-meta"><span class="t-price">$195</span><span class="t-dur">60 min</span></div>
+        <p class="t-desc">Brazilian-inspired contouring strokes that drain, define, and de-puff. Leave lighter than you arrived — most guests float out.</p>
+        <button class="t-book" data-treatment="Lymphatic Sculpt Massage">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="body">
+        <h3 class="t-name"><small>Body</small>Emsculpt Contour</h3>
+        <div class="t-meta"><span class="t-price">$275</span><span class="t-dur">30 min</span></div>
+        <p class="t-desc">20,000 supramaximal contractions per session — the equivalent of 20,000 crunches while you read. Abdomen, glutes, arms, or thighs.</p>
+        <button class="t-book" data-treatment="Emsculpt Contour">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="body">
+        <h3 class="t-name"><small>Body</small>Full-Body Polish</h3>
+        <div class="t-meta"><span class="t-price">$240</span><span class="t-dur">75 min</span></div>
+        <p class="t-desc">Crushed pearl and neroli exfoliation from shoulders to toes, sealed with warm botanical oils. Skin like poured silk.</p>
+        <button class="t-book" data-treatment="Full-Body Polish">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="rituals">
+        <h3 class="t-name"><small>Rituals</small>Hammam Glow</h3>
+        <div class="t-meta"><span class="t-price">$380</span><span class="t-dur">120 min</span></div>
+        <p class="t-desc">Our private hammam suite: eucalyptus steam, kese mitt exfoliation, rhassoul clay wrap, and a rosewater cool-down. A journey, not a treatment.</p>
+        <button class="t-book" data-treatment="Hammam Glow">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="rituals">
+        <h3 class="t-name"><small>Rituals</small>Golden Hour Package</h3>
+        <div class="t-meta"><span class="t-price">$520</span><span class="t-dur">180 min</span></div>
+        <p class="t-desc">The Lumière Facial, lymphatic sculpt massage, and gold leaf body veil — three hours that end exactly at golden hour. Champagne included.</p>
+        <button class="t-book" data-treatment="Golden Hour Package">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="rituals">
+        <h3 class="t-name"><small>Rituals</small>Couples Retreat</h3>
+        <div class="t-meta"><span class="t-price">$720</span><span class="t-dur">120 min</span></div>
+        <p class="t-desc">Side-by-side signature facials in our double suite, followed by a private tea service on the garden terrace. Silence, together.</p>
+        <button class="t-book" data-treatment="Couples Retreat">Reserve →</button>
+      </article>
+      <article class="treatment" data-cat="rituals">
+        <h3 class="t-name"><small>Rituals</small>Bridal Radiance</h3>
+        <div class="t-meta"><span class="t-price">$850</span><span class="t-dur">Half day</span></div>
+        <p class="t-desc">A 90-day plan culminating in a half-day immersion: facial, body polish, hair gloss, and makeup trial. Walk in engaged; float out luminous.</p>
+        <button class="t-book" data-treatment="Bridal Radiance">Reserve →</button>
+      </article>
+    </div>
+    <p class="menu-note reveal">All injectable treatments begin with a complimentary physician consultation. Prices reflect starting points — your protocol is quoted transparently before we begin. <a href="#booking">Reserve a consultation →</a></p>
+  </div>
+</section>
+
+<!-- ============ 03 SIGNATURE RITUAL ============ -->
+<section class="section" id="ritual">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">03</span><h2>The Signature Ritual</h2><hr class="rule">
+      <span class="label">Nine Steps · Ninety Minutes</span>
+    </div>
+    <div class="ritual-grid">
+      <div class="ritual-visual reveal" aria-hidden="true">
+        <div class="rv-scene">
+          <div class="rv-ring r2"></div>
+          <div class="rv-ring r1"></div>
+          <div class="rv-orb" id="rvOrb"></div>
+        </div>
+        <div class="rv-caption">
+          <span class="label">The Lumière Facial</span>
+          <p id="rvCaption">Double cleanse with warmed botanical oils</p>
+        </div>
+      </div>
+      <div>
+        <div class="step" data-caption="Double cleanse with warmed botanical oils">
+          <span class="s-num">Step 01</span>
+          <h3>The Unveiling</h3>
+          <p>A double cleanse with warmed camellia and neroli oils, followed by a skin analysis under clinical light. We map before we touch.</p>
+          <span class="s-time">15 min</span>
+        </div>
+        <div class="step" data-caption="Enzyme exfoliation, calibrated to your skin">
+          <span class="s-num">Step 02</span>
+          <h3>Enzyme Awakening</h3>
+          <p>Papaya and pumpkin enzymes dissolve the day's accumulation — no grit, no sting. Just the quiet lift of a surface made new.</p>
+          <span class="s-time">10 min</span>
+        </div>
+        <div class="step" data-caption="Ultrasonic purification of every pore">
+          <span class="s-num">Step 03</span>
+          <h3>Purification</h3>
+          <p>Ultrasonic spatula and gentle manual extraction clear congestion at its source, while cool globes calm the skin back to stillness.</p>
+          <span class="s-time">10 min</span>
+        </div>
+        <div class="step" data-caption="Sculpting massage along the lymphatic pathways">
+          <span class="s-num">Step 04</span>
+          <h3>The Sculpt</h3>
+          <p>Twenty minutes of lymphatic drainage and myofascial release along the jaw, cheek, and brow. Cheekbones you forgot you had.</p>
+          <span class="s-time">20 min</span>
+        </div>
+        <div class="step" data-caption="24k gold leaf pressed onto the skin">
+          <span class="s-num">Step 05</span>
+          <h3>Gold Leaf Ceremony</h3>
+          <p>Sheets of 24-karat gold pressed onto the skin over a hyaluronic serum bed. Anti-inflammatory, photogenic, and quietly theatrical.</p>
+          <span class="s-time">15 min</span>
+        </div>
+        <div class="step" data-caption="LED light therapy seals the ritual">
+          <span class="s-num">Step 06</span>
+          <h3>Light &amp; Seal</h3>
+          <p>Red and near-infrared LED to seal in actives and stimulate collagen, finished with our maison peptide cream and mineral veil. You leave glowing — not glossy.</p>
+          <span class="s-time">20 min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 VOICES ============ -->
+<section class="section testi-sec" id="voices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">04</span><h2>Guest Voices</h2><hr class="rule">
+      <span class="label">Unscripted</span>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <blockquote>"I've had facials on four continents. Nothing — nothing — compares to the Lumière. My skin looked lit from within for weeks."</blockquote>
+        <footer><div class="initials">VR</div><div><span>Vivienne R.</span><span>Palm Beach · Member since 2019</span></div></footer>
+      </div>
+      <div class="testi reveal reveal-d1">
+        <blockquote>"Dr. Aubert talked me out of filler I didn't need. Who does that? A maison that cares about faces, not invoices. I'm a client for life."</blockquote>
+        <footer><div class="initials">MS</div><div><span>Margaux S.</span><span>Wellington · Éclat Member</span></div></footer>
+      </div>
+      <div class="testi reveal reveal-d2">
+        <blockquote>"The Hammam Glow reset something in me I didn't know was tired. Two hours, and I walked out feeling a decade younger."</blockquote>
+        <footer><div class="initials">JC</div><div><span>Juliette C.</span><span>New York · Visiting Guest</span></div></footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 MEMBERSHIP ============ -->
+<section class="section" id="membership">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">05</span><h2>The Inner Circle</h2><hr class="rule">
+      <span class="label">Membership</span>
+    </div>
+    <div class="tiers">
+      <div class="tier reveal">
+        <span class="label">Essence</span>
+        <h3>The Introduction</h3>
+        <div class="price">$99<small> / month</small></div>
+        <p class="tier-desc">A standing appointment with radiance — the essentials, kept beautifully.</p>
+        <ul>
+          <li>One 60-minute classic facial monthly</li>
+          <li>10% off all retail products</li>
+          <li>Priority booking, 48-hour window</li>
+          <li>Birthday ritual upgrade</li>
+        </ul>
+        <a href="#booking" class="btn">Join Essence</a>
+      </div>
+      <div class="tier featured reveal reveal-d1">
+        <span class="label">Radiance</span>
+        <h3>The Devotion</h3>
+        <div class="price">$249<small> / month</small></div>
+        <p class="tier-desc">Our most loved circle — monthly transformation with meaningful privileges.</p>
+        <ul>
+          <li>One 90-minute facial or peel monthly</li>
+          <li>15% off injectables &amp; body treatments</li>
+          <li>Quarterly guest pass for a friend</li>
+          <li>15% off all retail products</li>
+          <li>First access to new rituals</li>
+        </ul>
+        <a href="#booking" class="btn">Join Radiance</a>
+      </div>
+      <div class="tier reveal reveal-d2">
+        <span class="label">Éclat</span>
+        <h3>The Pinnacle</h3>
+        <div class="price">$495<small> / month</small></div>
+        <p class="tier-desc">For those who consider radiance a discipline. Everything, elevated.</p>
+        <ul>
+          <li>Two treatments of choice monthly</li>
+          <li>20% off everything, always</li>
+          <li>Annual full-day Golden Hour ritual</li>
+          <li>Dedicated concierge line</li>
+          <li>Private suite on request</li>
+        </ul>
+        <a href="#booking" class="btn">Join Éclat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 BOOKING ============ -->
+<section class="section book-sec" id="booking">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">06</span><h2>Reserve Your Ritual</h2><hr class="rule">
+      <span class="label">Three Steps · Two Minutes</span>
+    </div>
+    <div class="book-shell reveal">
+      <div class="progress" aria-hidden="true">
+        <div class="p-step on" data-p="1"><span class="p-num">i.</span><span class="p-name">Treatment</span></div>
+        <div class="p-step" data-p="2"><span class="p-num">ii.</span><span class="p-name">Schedule</span></div>
+        <div class="p-step" data-p="3"><span class="p-num">iii.</span><span class="p-name">Details</span></div>
+      </div>
+
+      <div class="b-step on" data-s="1">
+        <h3>Choose your treatment</h3>
+        <div class="opt-grid" id="treatOpts"></div>
+        <div class="b-error" id="err1">Please select a treatment to continue.</div>
+        <div class="b-nav"><span></span><button class="btn btn-gold" id="toStep2">Continue →</button></div>
+      </div>
+
+      <div class="b-step" data-s="2">
+        <h3>Choose your moment</h3>
+        <span class="b-label">Day</span>
+        <div class="chip-row" id="dayRow"></div>
+        <span class="b-label">Time</span>
+        <div class="chip-row" id="timeRow"></div>
+        <div class="b-error" id="err2">Please choose a day and a time.</div>
+        <div class="b-nav"><button class="b-back" id="backTo1">← Back</button><button class="btn btn-gold" id="toStep3">Continue →</button></div>
+      </div>
+
+      <div class="b-step" data-s="3">
+        <h3>A few details</h3>
+        <div class="field-row">
+          <div class="field"><label for="fName">Full name</label><input id="fName" type="text" autocomplete="name" placeholder="Alexandra Laurent"></div>
+          <div class="field"><label for="fPhone">Phone</label><input id="fPhone" type="tel" autocomplete="tel" placeholder="(561) 555-0100"></div>
+        </div>
+        <div class="field"><label for="fEmail">Email</label><input id="fEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+        <div class="field"><label for="fNotes">Anything we should know? <span style="opacity:.55">(optional)</span></label><textarea id="fNotes" rows="3" placeholder="Allergies, occasions, preferences…"></textarea></div>
+        <div class="b-error" id="err3">Please share your name and a valid email so we can confirm.</div>
+        <div class="b-nav"><button class="b-back" id="backTo2">← Back</button><button class="btn btn-gold" id="confirmBtn">Confirm Reservation</button></div>
+      </div>
+
+      <div class="b-step" data-s="4">
+        <div class="confirm">
+          <div class="seal"><span>ML</span></div>
+          <h3>Consider it done.</h3>
+          <p id="confirmSummary">Your ritual is reserved. A confirmation letter follows by email shortly.</p>
+          <p>Our concierge will call the day before to prepare your suite.</p>
+          <span class="ref" id="confirmRef">REF · ML-0000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 VISIT ============ -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">07</span><h2>Visit the Maison</h2><hr class="rule">
+      <span class="label">Worth Avenue</span>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+        <div class="visit-block">
+          <h4>Address</h4>
+          <p>120 Worth Avenue, Suite 200<br>Palm Beach, Florida 33480</p>
+        </div>
+        <div class="visit-block">
+          <h4>Hours</h4>
+          <p>Monday – Friday · 9am – 7pm<br>Saturday · 9am – 5pm<br>Sunday · By private appointment</p>
+        </div>
+        <div class="visit-block">
+          <h4>Contact</h4>
+          <p><a href="tel:+15615550194">(561) 555-0194</a><br><a href="mailto:bonjour@maisonlumiere.example">bonjour@maisonlumiere.example</a></p>
+        </div>
+        <div class="visit-block">
+          <h4>Arrival</h4>
+          <p>Complimentary valet on Worth Avenue. Please arrive fifteen minutes early — your tea will be waiting.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-d1">
+        <span class="label" style="display:block;margin-bottom:1.4rem">Questions, Answered</span>
+        <div class="faq-item">
+          <button class="faq-q">Do I need a consultation before injectables?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Yes — and it is complimentary. Every injectable journey begins with a physician consultation where we study your structure, discuss your aims honestly, and quote transparently. We have been known to talk guests out of treatments they don't need.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What is your cancellation policy?<span class="pm">+</span></button>
+          <div class="faq-a"><p>We ask for 48 hours' notice for single treatments and one week for rituals and packages. Late cancellations are charged at 50%; suites are prepared exclusively for you.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is everything safe for sensitive skin?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Nearly always, yes. Every protocol begins with a skin analysis, and our aestheticians calibrate enzymes, peels, and modalities to your exact sensitivity. If something isn't right for you, we will say so — and suggest what is.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you offer gift cards?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Beautifully. Physical gift cards arrive in our signature gold-foil envelope; digital cards arrive within the hour. Both are redeemable against every treatment, ritual, and membership.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">I am visiting Palm Beach — can I book a single ritual?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Absolutely. Roughly a third of our guests are visitors. Book any treatment à la carte, or ask our concierge to compose a half-day around your stay.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-word reveal">MAISON <span>Lumière</span></div>
+    <div class="foot-grid">
+      <div>
+        <h5>Visit</h5>
+        <p>120 Worth Avenue, Suite 200<br>Palm Beach, FL 33480</p>
+        <p>Mon–Fri 9–7 · Sat 9–5</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="tel:+15615550194">(561) 555-0194</a>
+        <a href="mailto:bonjour@maisonlumiere.example">bonjour@maisonlumiere.example</a>
+        <a href="#booking">Reserve a ritual</a>
+      </div>
+      <div>
+        <h5>Maison</h5>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#menu">Treatments</a>
+        <a href="#membership">Membership</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Maison Lumière — A fictional concept study</span>
+      <span>Crafted with restraint</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced) document.documentElement.classList.add("reduced-motion");
+
+  /* ---------- NAV scroll state ---------- */
+  var nav = document.getElementById("nav");
+  function onScrollNav(){ nav.classList.toggle("scrolled", window.scrollY > 40); }
+  window.addEventListener("scroll", onScrollNav, {passive:true});
+  onScrollNav();
+
+  /* ---------- MARQUEE: duplicate track for seamless loop ---------- */
+  var track = document.getElementById("marqueeTrack");
+  track.innerHTML += track.innerHTML;
+
+  /* ---------- REVEALS ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, {threshold:.12, rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+
+  /* ---------- MENU FILTERING ---------- */
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
+  var items = Array.prototype.slice.call(document.querySelectorAll(".treatment"));
+  chips.forEach(function(chip){
+    chip.addEventListener("click", function(){
+      chips.forEach(function(c){ c.classList.remove("active"); c.setAttribute("aria-selected","false"); });
+      chip.classList.add("active"); chip.setAttribute("aria-selected","true");
+      var f = chip.getAttribute("data-filter");
+      items.forEach(function(it){
+        var show = (f === "all" || it.getAttribute("data-cat") === f);
+        if (show){
+          it.classList.remove("hide"); it.classList.add("fade");
+          requestAnimationFrame(function(){ requestAnimationFrame(function(){
+            it.classList.remove("fade");
+          });});
+        } else {
+          it.classList.add("fade");
+          setTimeout(function(){ it.classList.add("hide"); it.classList.remove("fade"); }, reduced ? 0 : 320);
+        }
+      });
+    });
+  });
+
+  /* ---------- RITUAL SCROLLYTELLING ---------- */
+  var steps = Array.prototype.slice.call(document.querySelectorAll(".step"));
+  var caption = document.getElementById("rvCaption");
+  var orb = document.getElementById("rvOrb");
+  var stepIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){
+        steps.forEach(function(s){ s.classList.remove("lit"); });
+        e.target.classList.add("lit");
+        var cap = e.target.getAttribute("data-caption");
+        if (cap && caption) caption.textContent = cap;
+        if (orb){
+          var idx = steps.indexOf(e.target);
+          var scale = 1 + idx * 0.09;
+          orb.style.transform = "scale(" + scale.toFixed(2) + ") rotate(" + (idx * 14) + "deg)";
+        }
+      }
+    });
+  }, {threshold:.55});
+  steps.forEach(function(s){ stepIO.observe(s); });
+  if (steps.length) steps[0].classList.add("lit");
+
+  /* ---------- FAQ ACCORDION ---------- */
+  document.querySelectorAll(".faq-item").forEach(function(item){
+    var q = item.querySelector(".faq-q"), a = item.querySelector(".faq-a");
+    q.addEventListener("click", function(){
+      var open = item.classList.contains("open");
+      document.querySelectorAll(".faq-item.open").forEach(function(o){
+        o.classList.remove("open"); o.querySelector(".faq-a").style.maxHeight = null;
+      });
+      if (!open){
+        item.classList.add("open");
+        a.style.maxHeight = a.scrollHeight + "px";
+      }
+    });
+  });
+
+  /* ---------- HERO PARALLAX (subtle) ---------- */
+  var heroVisual = document.getElementById("heroVisual");
+  if (heroVisual && !reduced){
+    var ticking = false;
+    window.addEventListener("scroll", function(){
+      if (!ticking){
+        window.requestAnimationFrame(function(){
+          var y = window.scrollY;
+          if (y < window.innerHeight * 1.2){
+            heroVisual.style.transform = "translateY(" + (y * 0.12).toFixed(1) + "px)";
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, {passive:true});
+  }
+
+  /* ---------- BOOKING WIDGET ---------- */
+  var TREATMENTS = [
+    {name:"The Lumière Facial", sub:"Signature · 90 min · $295"},
+    {name:"HydraGlow Facial", sub:"Skin · 60 min · $185"},
+    {name:"OxyGeneo Renewal", sub:"Skin · 45 min · $165"},
+    {name:"Chemical Renewal Peel", sub:"Skin · 60 min · $210"},
+    {name:"Botox & Dysport", sub:"Injectables · from $12/unit"},
+    {name:"Dermal Fillers", sub:"Injectables · from $650"},
+    {name:"Lymphatic Sculpt Massage", sub:"Body · 60 min · $195"},
+    {name:"Hammam Glow", sub:"Ritual · 120 min · $380"},
+    {name:"Golden Hour Package", sub:"Ritual · 180 min · $520"},
+    {name:"Physician Consultation", sub:"Complimentary · 30 min"}
+  ];
+  var TIMES = ["9:00 AM","10:30 AM","12:00 PM","1:30 PM","3:00 PM","4:30 PM"];
+  var state = { treatment:null, day:null, time:null, step:1 };
+
+  var treatOpts = document.getElementById("treatOpts");
+  TREATMENTS.forEach(function(t){
+    var b = document.createElement("button");
+    b.className = "opt"; b.type = "button";
+    b.innerHTML = '<span><span class="o-name"></span><span class="o-sub"></span></span><span aria-hidden="true">→</span>';
+    b.querySelector(".o-name").textContent = t.name;
+    b.querySelector(".o-sub").textContent = t.sub;
+    b.addEventListener("click", function(){
+      treatOpts.querySelectorAll(".opt").forEach(function(o){ o.classList.remove("sel"); });
+      b.classList.add("sel");
+      state.treatment = t.name;
+      hideErr("err1");
+    });
+    treatOpts.appendChild(b);
+  });
+  /* deep-link from menu "Reserve →" buttons */
+  document.querySelectorAll(".t-book").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var name = btn.getAttribute("data-treatment");
+      treatOpts.querySelectorAll(".opt").forEach(function(o){
+        var match = o.querySelector(".o-name").textContent === name;
+        o.classList.toggle("sel", match);
+        if (match) state.treatment = name;
+      });
+      document.getElementById("booking").scrollIntoView({behavior: reduced ? "auto" : "smooth"});
+    });
+  });
+
+  var dayRow = document.getElementById("dayRow");
+  var timeRow = document.getElementById("timeRow");
+  var days = [];
+  (function(){
+    var fmtD = new Intl.DateTimeFormat("en-US",{weekday:"short"});
+    var fmtN = new Intl.DateTimeFormat("en-US",{month:"short",day:"numeric"});
+    for (var i=1;i<=7;i++){
+      var d = new Date(); d.setDate(d.getDate()+i);
+      days.push({label:fmtD.format(d)+" "+fmtN.format(d), dow:fmtD.format(d), full:fmtN.format(d)});
+    }
+  })();
+  days.forEach(function(dy){
+    var b = document.createElement("button");
+    b.className = "day-chip"; b.type = "button";
+    b.innerHTML = "<small></small><span></span>";
+    b.querySelector("small").textContent = dy.dow;
+    b.querySelector("span").textContent = dy.full;
+    b.addEventListener("click", function(){
+      dayRow.querySelectorAll(".day-chip").forEach(function(o){ o.classList.remove("sel"); });
+      b.classList.add("sel"); state.day = dy.label; hideErr("err2");
+    });
+    dayRow.appendChild(b);
+  });
+  TIMES.forEach(function(tm){
+    var b = document.createElement("button");
+    b.className = "time-chip"; b.type = "button"; b.textContent = tm;
+    b.addEventListener("click", function(){
+      timeRow.querySelectorAll(".time-chip").forEach(function(o){ o.classList.remove("sel"); });
+      b.classList.add("sel"); state.time = tm; hideErr("err2");
+    });
+    timeRow.appendChild(b);
+  });
+
+  function goStep(n){
+    state.step = n;
+    document.querySelectorAll(".b-step").forEach(function(s){
+      s.classList.toggle("on", parseInt(s.getAttribute("data-s"),10) === n);
+    });
+    document.querySelectorAll(".p-step").forEach(function(p){
+      p.classList.toggle("on", parseInt(p.getAttribute("data-p"),10) <= Math.min(n,3));
+    });
+  }
+  function showErr(id){ document.getElementById(id).classList.add("show"); }
+  function hideErr(id){ document.getElementById(id).classList.remove("show"); }
+
+  document.getElementById("toStep2").addEventListener("click", function(){
+    if (!state.treatment){ showErr("err1"); return; }
+    goStep(2);
+  });
+  document.getElementById("backTo1").addEventListener("click", function(){ goStep(1); });
+  document.getElementById("toStep3").addEventListener("click", function(){
+    if (!state.day || !state.time){ showErr("err2"); return; }
+    goStep(3);
+  });
+  document.getElementById("backTo2").addEventListener("click", function(){ goStep(2); });
+  document.getElementById("confirmBtn").addEventListener("click", function(){
+    var name = document.getElementById("fName").value.trim();
+    var email = document.getElementById("fEmail").value.trim();
+    var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!name || !okEmail){ showErr("err3"); return; }
+    hideErr("err3");
+    var ref = "ML-" + Math.floor(1000 + Math.random()*9000);
+    document.getElementById("confirmRef").textContent = "REF · " + ref;
+    document.getElementById("confirmSummary").textContent =
+      name.split(" ")[0] + ", your " + state.treatment + " is reserved for " +
+      state.day + " at " + state.time + ". A confirmation letter follows at " + email + ".";
+    goStep(4);
+  });
+})();
+</script>
+</body>
+</html>

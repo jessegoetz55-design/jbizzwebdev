@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Roofing — Roofs Built Like Fortresses | Fort Lauderdale, FL</title>
+<meta name="description" content="South Florida's premium roofing contractor. Storm-rated systems, white-glove crews, 50-year warranty. Get an instant AI estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RoofingContractor","name":"Apex Roofing","areaServed":["Fort Lauderdale","Miami","Boca Raton","West Palm Beach"],"telephone":"+1-954-555-0134","priceRange":"$$","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"612"}}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink:#0a0f14;
+  --ink-2:#0e141b;
+  --ink-3:#131c26;
+  --gold:#c9a86a;
+  --gold-dim:rgba(201,168,106,.35);
+  --paper:#f2efe9;
+  --muted:rgba(242,239,233,.62);
+  --faint:rgba(242,239,233,.38);
+  --line:rgba(242,239,233,.09);
+  --display:'Anton',sans-serif;
+  --body:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--gold);color:var(--ink)}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* film grain */
+body::after{
+  content:"";position:fixed;inset:0;z-index:2000;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.eyebrow{
+  font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:.9rem;margin-bottom:1.4rem;
+}
+.eyebrow::before{content:"";width:2.4rem;height:1px;background:var(--gold);flex:none}
+h1,h2,.display{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.94;letter-spacing:.005em}
+.section{padding:clamp(5rem,10vw,9rem) 0;position:relative}
+.lead{font-size:clamp(1.02rem,1.6vw,1.22rem);color:var(--muted);max-width:44rem}
+
+/* ============ PRELOADER ============ */
+#loader{position:fixed;inset:0;z-index:3000;background:var(--ink);display:flex;align-items:center;justify-content:center;transition:opacity .8s var(--ease),visibility .8s}
+#loader.done{opacity:0;visibility:hidden}
+#loader .mark{font-family:var(--display);font-size:clamp(4rem,10vw,7rem);color:var(--gold);position:relative}
+#loader .mark::after{content:"";position:absolute;inset:-6px;border:1px solid var(--gold);opacity:0;animation:ring 1.6s var(--ease) infinite}
+@keyframes ring{0%{transform:scale(.85);opacity:0}40%{opacity:.8}100%{transform:scale(1.25);opacity:0}}
+#loader .tag{position:absolute;bottom:12vh;font-family:var(--mono);font-size:10px;letter-spacing:.4em;color:var(--faint);text-transform:uppercase}
+
+/* ============ NAV ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(10,15,20,.86);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav-in{max-width:1440px;margin:0 auto;padding:1.1rem clamp(1.25rem,4vw,3rem);display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--display);font-size:1.5rem;letter-spacing:.06em}
+.logo b{color:var(--gold);font-weight:400}
+.nav-links{display:flex;gap:2.2rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.nav-links a{color:var(--muted);transition:color .3s;position:relative}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:.95rem 1.9rem;border:1px solid transparent;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s,background .35s,color .35s;border-radius:2px}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,168,106,.28)}
+.btn-ghost{border-color:rgba(242,239,233,.28);color:var(--paper);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-sm{padding:.7rem 1.4rem;font-size:.76rem}
+#menuBtn{display:none;background:none;border:0;color:var(--paper);cursor:pointer;padding:.4rem}
+#menuBtn svg{width:26px;height:26px}
+
+/* ============ HERO ============ */
+.hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;overflow:hidden;padding:9rem 0 5rem}
+.storm{position:absolute;inset:0;z-index:0}
+/* layered storm clouds */
+.storm .clouds{position:absolute;inset:-10%;background:
+  radial-gradient(60% 42% at 18% 12%, rgba(58,72,88,.85), transparent 70%),
+  radial-gradient(46% 36% at 78% 8%, rgba(46,58,72,.9), transparent 70%),
+  radial-gradient(70% 50% at 52% 30%, rgba(30,40,52,.95), transparent 75%),
+  radial-gradient(90% 60% at 50% 108%, rgba(14,20,27,0), transparent 70%),
+  linear-gradient(180deg,#1a2430 0%,#101720 46%,#0a0f14 100%);
+  animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translateX(-2.5%) scale(1.04)}to{transform:translateX(2.5%) scale(1.08)}}
+/* lightning glow */
+.storm .bolt{position:absolute;inset:0;background:radial-gradient(34% 30% at 68% 18%, rgba(201,168,106,.20), transparent 70%);opacity:0;animation:flash 9s infinite}
+@keyframes flash{0%,93%,100%{opacity:0}94%{opacity:.9}95.5%{opacity:.15}97%{opacity:.55}98.5%{opacity:0}}
+/* rain: two depth layers */
+.rain{position:absolute;inset:-40% 0 0 0;pointer-events:none;background-image:repeating-linear-gradient(102deg, transparent 0 14px, rgba(174,194,214,.16) 14px 15px);animation:rain .55s linear infinite}
+.rain.far{background-image:repeating-linear-gradient(102deg, transparent 0 26px, rgba(174,194,214,.09) 26px 27px);animation-duration:.9s}
+@keyframes rain{from{transform:translateY(-6%)}to{transform:translateY(6%)}}
+/* horizon glow + vignette */
+.storm .glow{position:absolute;inset:0;background:radial-gradient(75% 34% at 50% 100%, rgba(201,168,106,.16), transparent 70%)}
+.storm .vig{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,20,.55),transparent 30%,transparent 55%,var(--ink) 100%)}
+.hero-in{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(4rem,12vw,11rem);max-width:12ch}
+.hero h1 .gold{color:var(--gold)}
+.hero .sub{margin:1.8rem 0 2.6rem;max-width:36rem;font-size:clamp(1.02rem,1.7vw,1.25rem);color:var(--muted)}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-meta{margin-top:3.4rem;display:flex;gap:2.6rem;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--faint)}
+.hero-meta span{display:flex;align-items:center;gap:.6rem}
+.hero-meta svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2}
+.scroll-hint{position:absolute;right:clamp(1.25rem,4vw,3rem);bottom:2.2rem;z-index:2;writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.4em;color:var(--faint);text-transform:uppercase;display:flex;align-items:center;gap:1rem}
+.scroll-hint::after{content:"";width:1px;height:56px;background:linear-gradient(var(--gold),transparent);animation:drop 2.2s var(--ease) infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============ MARQUEE ============ */
+.marquee{background:var(--gold);color:var(--ink);overflow:hidden;white-space:nowrap;padding:1rem 0;position:relative;z-index:3}
+.marquee-track{display:inline-flex;gap:0;animation:scroll 28s linear infinite}
+.marquee span{font-family:var(--mono);font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;padding:0 1.6rem;font-weight:500}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ============ STATS ============ */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding:3.6rem 0}
+.stat{text-align:left;position:relative;padding-left:1.6rem}
+.stat::before{content:"";position:absolute;left:0;top:.4rem;bottom:.4rem;width:1px;background:var(--gold-dim)}
+.stat .num{font-family:var(--display);font-size:clamp(2.6rem,5vw,4rem);color:var(--paper);line-height:1}
+.stat .num em{font-style:normal;color:var(--gold)}
+.stat .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--faint);margin-top:.7rem}
+</style>
+<style>
+/* ============ APEX STANDARD ============ */
+.standard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
+.std{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem 1.8rem;transition:transform .45s var(--ease),border-color .45s}
+.std:hover{transform:translateY(-6px);border-color:var(--gold-dim)}
+.std .n{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;color:var(--gold);margin-bottom:1.1rem}
+.std svg{width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.5;margin-bottom:1.2rem;display:block}
+.std h3{font-size:1.05rem;font-weight:600;letter-spacing:.02em;margin-bottom:.6rem}
+.std p{font-size:.88rem;color:var(--muted)}
+
+/* ============ GUARANTEE BAND ============ */
+.guarantee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--ink-2),var(--ink))}
+.guar-in{display:grid;grid-template-columns:auto 1fr auto;gap:2.4rem;align-items:center;padding:3.2rem 0}
+.seal{width:110px;height:110px;flex:none;border:2px solid var(--gold);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);position:relative}
+.seal::before{content:"";position:absolute;inset:7px;border:1px solid var(--gold-dim);border-radius:50%}
+.seal b{font-size:1.5rem;color:var(--gold);line-height:1}
+.seal span{font-size:.55rem;letter-spacing:.24em;color:var(--muted);margin-top:.3rem}
+.guar-in h3{font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.4rem);letter-spacing:.02em;margin-bottom:.5rem}
+.guar-in p{color:var(--muted);font-size:.95rem;max-width:38rem}
+@media(max-width:760px){.guar-in{grid-template-columns:1fr;text-align:center;justify-items:center}.standard-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.standard-grid{grid-template-columns:1fr}}
+
+/* ============ ESTIMATOR (centerpiece) ============ */
+.estimator{background:radial-gradient(80% 90% at 50% 0%, #14202c 0%, var(--ink) 62%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.est-shell{margin-top:3rem;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.5rem,4vw,3.5rem);background:rgba(19,28,38,.72);border:1px solid var(--line);border-radius:6px;padding:clamp(1.6rem,4vw,3rem);backdrop-filter:blur(8px);position:relative;overflow:hidden}
+.est-shell::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.est-field{margin-bottom:2.2rem}
+.est-field label{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--faint);margin-bottom:1rem}
+.est-field label output{color:var(--gold);font-size:.95rem;letter-spacing:.06em}
+input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:2px;background:linear-gradient(90deg,var(--gold) var(--fill,50%),rgba(242,239,233,.16) var(--fill,50%));outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--ink);border:2px solid var(--gold);box-shadow:0 0 0 6px rgba(201,168,106,.12);cursor:grab;transition:box-shadow .3s}
+input[type=range]::-webkit-slider-thumb:hover{box-shadow:0 0 0 10px rgba(201,168,106,.16)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--ink);border:2px solid var(--gold);cursor:grab}
+.seg{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.seg button{flex:1;background:transparent;border:0;color:var(--muted);font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;padding:.95rem 0;cursor:pointer;transition:all .3s}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button.active{background:var(--gold);color:var(--ink);font-weight:500}
+.mats{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+.mat{background:transparent;border:1px solid var(--line);border-radius:2px;padding:1.2rem .8rem;cursor:pointer;text-align:center;transition:all .35s var(--ease);color:var(--paper)}
+.mat:hover{border-color:var(--gold-dim);transform:translateY(-2px)}
+.mat.active{border-color:var(--gold);background:rgba(201,168,106,.07);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.mat .t{font-weight:600;font-size:.86rem;letter-spacing:.04em;margin:.7rem 0 .3rem}
+.mat .p{font-family:var(--mono);font-size:.72rem;color:var(--gold);letter-spacing:.08em}
+.mat svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.6;margin:0 auto;display:block}
+.est-out{background:var(--ink);border:1px solid var(--line);border-radius:4px;padding:clamp(1.6rem,3vw,2.6rem);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.est-out::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 40% at 80% 0%,rgba(201,168,106,.10),transparent 70%);pointer-events:none}
+.est-out .k{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
+.est-range{font-family:var(--display);font-size:clamp(2.6rem,5.4vw,4.2rem);margin:1rem 0 .4rem;color:var(--paper)}
+.est-range em{font-style:normal;color:var(--gold)}
+.est-note{font-size:.82rem;color:var(--faint);margin-bottom:1.2rem}
+.est-finance{display:flex;align-items:baseline;gap:.6rem;margin-bottom:1.8rem;font-size:.85rem;color:var(--muted)}
+.est-finance b{font-family:var(--display);font-size:1.7rem;color:var(--gold);font-weight:400;letter-spacing:.02em}
+.est-lines{border-top:1px solid var(--line);margin-bottom:1.8rem}
+.est-lines div{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);padding:.55rem 0;border-bottom:1px solid var(--line)}
+.est-lines div b{color:var(--paper);font-weight:500;font-family:var(--mono);font-size:.8rem}
+.est-includes{margin-bottom:1.8rem}
+.est-includes ul{list-style:none}
+.est-includes li{font-size:.82rem;color:var(--muted);padding:.4rem 0 .4rem 1.6rem;position:relative}
+.est-includes li::before{content:"";position:absolute;left:0;top:.85rem;width:.55rem;height:.55rem;border:1px solid var(--gold);transform:rotate(45deg)}
+
+/* ============ BEFORE / AFTER ============ */
+.ba{position:relative;border:1px solid var(--line);border-radius:6px;overflow:hidden;aspect-ratio:16/9;max-height:640px;user-select:none;touch-action:pan-y;cursor:ew-resize;margin-top:3rem}
+.scene{position:absolute;inset:0}
+.scene .sky{position:absolute;inset:0 0 34% 0}
+.scene .ground{position:absolute;left:0;right:0;bottom:0;height:34%}
+.scene .house{position:absolute;left:50%;bottom:22%;transform:translateX(-50%);width:min(46%,420px);aspect-ratio:4/3.4}
+.scene .body{position:absolute;left:8%;right:8%;bottom:0;top:38%}
+.scene .roof{position:absolute;left:-2%;right:-2%;top:0;height:52%;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.scene .door{position:absolute;left:44%;right:44%;bottom:0;top:62%}
+.scene .win{position:absolute;top:52%;width:14%;aspect-ratio:1;background:rgba(180,210,235,.5);border:3px solid rgba(0,0,0,.25)}
+.scene .win.l{left:16%}.scene .win.r{right:16%}
+.scene .chim{position:absolute;top:6%;right:20%;width:9%;height:30%}
+.scene .lawn{position:absolute;left:0;right:0;bottom:0;height:26%}
+/* BEFORE: weathered */
+.ba-before .sky{background:linear-gradient(180deg,#39414b,#232a32 70%,#1a2027)}
+.ba-before .ground{background:linear-gradient(180deg,#2c2f24,#1d2018)}
+.ba-before .body{background:#6b655c}
+.ba-before .roof{background:linear-gradient(180deg,#4a4a4c,#333335)}
+.ba-before .door{background:#3c3831}
+.ba-before .chim{background:#4c4a45}
+.ba-before .lawn{background:linear-gradient(180deg,#3f4a2e,#2a331e)}
+.ba-before::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(18% 12% at 30% 60%, rgba(20,24,18,.5), transparent 70%),
+  radial-gradient(24% 16% at 68% 42%, rgba(15,18,14,.45), transparent 70%),
+  radial-gradient(14% 10% at 52% 74%, rgba(22,26,18,.5), transparent 70%);pointer-events:none}
+/* AFTER: renewed */
+.ba-after .sky{background:linear-gradient(180deg,#0e1e33 0%,#274a6b 55%,#c9a86a 130%)}
+.ba-after .ground{background:linear-gradient(180deg,#3a4a2c,#232b1a)}
+.ba-after .body{background:#e8ddc8}
+.ba-after .roof{background:linear-gradient(180deg,#2c3540,#161d24)}
+.ba-after .roof::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 46%,rgba(201,168,106,.55) 46.5%,rgba(201,168,106,.55) 47.5%,transparent 48%),linear-gradient(105deg,transparent 56%,rgba(201,168,106,.55) 56.5%,rgba(201,168,106,.55) 57.5%,transparent 58%)}
+.ba-after .door{background:#14202c}
+.ba-after .chim{background:#8a7a5f}
+.ba-after .lawn{background:linear-gradient(180deg,#4d6034,#31411f)}
+.ba-after .sun{position:absolute;top:12%;right:12%;width:9%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ffe9b8 0%,rgba(201,168,106,.85) 40%,transparent 72%)}
+.ba-after .win{background:rgba(255,236,190,.85);box-shadow:0 0 24px rgba(255,220,150,.5)}
+.ba-top{clip-path:inset(0 calc(100% - var(--x,50%)) 0 0)}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;background:var(--gold);z-index:5;box-shadow:0 0 18px rgba(201,168,106,.6)}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:1rem;box-shadow:0 8px 26px rgba(0,0,0,.5)}
+.ba-tag{position:absolute;top:1.2rem;font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;padding:.55rem 1.1rem;background:rgba(10,15,20,.72);border:1px solid var(--line);backdrop-filter:blur(6px);z-index:4}
+.ba-tag.b{left:1.2rem;color:var(--muted)}
+.ba-tag.a{right:1.2rem;color:var(--gold);border-color:var(--gold-dim)}
+
+/* ============ BENTO MATERIALS ============ */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.bcard{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2.2rem;position:relative;overflow:hidden;transition:transform .45s var(--ease),border-color .45s}
+.bcard:hover{transform:translateY(-6px);border-color:var(--gold-dim)}
+.bcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.bcard:hover::before{transform:scaleX(1)}
+.bcard .price{font-family:var(--display);font-size:2.6rem;margin:.6rem 0}
+.bcard .price small{font-family:var(--mono);font-size:.7rem;color:var(--faint);letter-spacing:.1em}
+.bcard ul{list-style:none;margin-top:1.2rem;border-top:1px solid var(--line)}
+.bcard li{display:flex;justify-content:space-between;font-size:.86rem;padding:.6rem 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.bcard li b{color:var(--paper);font-weight:500}
+.bcard h3{font-family:var(--display);font-size:1.7rem;letter-spacing:.03em;margin-top:1rem}
+.bcard .ico{width:44px;height:44px;border:1px solid var(--gold-dim);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.bcard .ico svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.6}
+
+/* ============ PROCESS ============ */
+.steps{margin-top:3.5rem;position:relative}
+.steps::before{content:"";position:absolute;left:23px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.step{display:grid;grid-template-columns:48px 1fr;gap:1.8rem;padding:2rem 0;position:relative}
+.step .dot{width:48px;height:48px;border-radius:50%;border:1px solid var(--gold-dim);background:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.8rem;color:var(--gold);z-index:1;transition:all .5s}
+.step.active .dot{background:var(--gold);color:var(--ink);box-shadow:0 0 30px rgba(201,168,106,.4)}
+.step h3{font-family:var(--display);font-size:1.9rem;letter-spacing:.02em;margin-bottom:.5rem}
+.step p{color:var(--muted);max-width:40rem}
+.step .when{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:.7rem;display:block}
+.deliv{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);display:inline-block;padding:.5rem 1rem;border-radius:100px;margin-top:1rem}
+
+/* scroll progress */
+#progress{position:fixed;top:0;left:0;height:2px;background:var(--gold);width:0;z-index:1600}
+
+/* emergency strip */
+.emergency{background:#3d1520;border-bottom:1px solid rgba(201,168,106,.25);position:relative;z-index:3}
+.emergency .wrap{display:flex;align-items:center;justify-content:center;gap:1rem;padding:.85rem clamp(1.25rem,4vw,3rem);font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#f0d9c8;flex-wrap:wrap;text-align:center}
+.emergency b{color:var(--gold)}
+.emergency a{color:var(--gold);border-bottom:1px solid var(--gold-dim)}
+
+/* ============ REVIEWS ============ */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.rev{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2.2rem;display:flex;flex-direction:column;gap:1.2rem;transition:transform .45s var(--ease),border-color .45s}
+.rev:hover{transform:translateY(-6px);border-color:var(--gold-dim)}
+.stars{display:flex;gap:.25rem}
+.stars svg{width:16px;height:16px;fill:var(--gold)}
+.rev p{font-size:.96rem;color:var(--paper);flex:1}
+.rev .who{border-top:1px solid var(--line);padding-top:1.2rem}
+.rev .who b{display:block;font-weight:600;font-size:.9rem}
+.rev .who span{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;color:var(--faint);text-transform:uppercase}
+
+/* ============ SERVICE AREA + FAQ ============ */
+.area-faq{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4.5rem);margin-top:3rem;align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.chip{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);padding:.7rem 1.2rem;border-radius:100px;color:var(--muted);transition:all .3s}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.faq{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:0;color:var(--paper);display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.5rem .2rem;cursor:pointer;font-size:1.02rem;font-weight:500;text-align:left;font-family:var(--body)}
+.faq-q .ic{flex:none;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease);font-size:1.1rem;font-weight:300;color:var(--gold)}
+.faq-item.open .ic{background:var(--gold);color:var(--ink);transform:rotate(45deg);border-color:var(--gold)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.faq-a p{padding:0 .2rem 1.6rem;color:var(--muted);font-size:.94rem;max-width:34rem}
+
+/* ============ FINAL CTA / FOOTER ============ */
+.final{background:radial-gradient(70% 100% at 50% 100%, #1a2a3a 0%, var(--ink) 70%);text-align:center;border-top:1px solid var(--line)}
+.final h2{font-size:clamp(3.2rem,9vw,7.5rem);max-width:14ch;margin:0 auto}
+.final h2 .gold{color:var(--gold)}
+.final .lead{margin:1.6rem auto 2.6rem}
+footer{border-top:1px solid var(--line);padding:3.5rem 0 7rem}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2.5rem}
+.foot-grid h4{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.foot-grid a,.foot-grid p{display:block;color:var(--muted);font-size:.9rem;margin-bottom:.6rem}
+.foot-grid a:hover{color:var(--gold)}
+.foot-base{margin-top:3rem;padding-top:1.8rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase}
+
+/* sticky mobile call bar */
+.callbar{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:900;display:none;gap:.8rem}
+.callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;border-radius:4px}
+.callbar .call{background:var(--gold);color:var(--ink)}
+.callbar .est{background:rgba(14,20,27,.92);color:var(--paper);border:1px solid var(--gold-dim);backdrop-filter:blur(8px)}
+.callbar svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1020px){
+  .est-shell{grid-template-columns:1fr}
+  .bento,.rev-grid{grid-template-columns:1fr 1fr}
+  .area-faq{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:2.4rem}
+}
+@media(max-width:760px){
+  .nav-links{display:none}
+  #menuBtn{display:block}
+  .mobile-menu{position:fixed;inset:0;z-index:1500;background:rgba(10,15,20,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;visibility:hidden;transition:all .4s}
+  .mobile-menu.open{opacity:1;visibility:visible}
+  .mobile-menu a{font-family:var(--display);font-size:2.2rem;text-transform:uppercase}
+  .mobile-menu a:hover{color:var(--gold)}
+  #menuClose{position:absolute;top:1.4rem;right:1.6rem;background:none;border:0;color:var(--paper);font-size:2rem;cursor:pointer}
+  .bento,.rev-grid{grid-template-columns:1fr}
+  .nav-cta{display:none}
+  .callbar{display:flex}
+  .hero{padding-top:7rem}
+  .mats{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .ba{aspect-ratio:4/5;max-height:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<noscript><div style="background:#c9a86a;color:#0a0f14;text-align:center;padding:1rem;font-family:sans-serif">Apex Roofing — call (954) 555-0134 for a free inspection. This demo is best viewed with JavaScript enabled.</div></noscript>
+
+<!-- PRELOADER -->
+<div id="loader" aria-hidden="true">
+  <div class="mark">A.</div>
+  <div class="tag">Apex Roofing</div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#top" class="logo">APEX<b>.</b></a>
+    <div class="nav-links">
+      <a href="#estimator">Estimator</a>
+      <a href="#materials">Materials</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#final" class="btn btn-gold btn-sm nav-cta">Free Inspection</a>
+    <button id="menuBtn" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button id="menuClose" aria-label="Close menu">&times;</button>
+  <a href="#estimator">Estimator</a>
+  <a href="#materials">Materials</a>
+  <a href="#process">Process</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#faq">FAQ</a>
+  <a href="#final" class="btn btn-gold" style="font-family:var(--body);font-size:.9rem">Free Inspection</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="storm" aria-hidden="true">
+    <div class="clouds"></div>
+    <div class="bolt"></div>
+    <div class="rain far"></div>
+    <div class="rain"></div>
+    <div class="glow"></div>
+    <div class="vig"></div>
+  </div>
+  <div class="wrap hero-in">
+    <div class="eyebrow reveal">Fort Lauderdale · FL — Licensed &amp; Insured · CCC-1331845</div>
+    <h1 class="reveal d1">Roofs built<br>like <span class="gold">fortresses.</span></h1>
+    <p class="sub reveal d2">South Florida's premium roofing contractor. Storm-rated systems, white-glove crews, and a 50-year warranty — installed in days, not weeks.</p>
+    <div class="hero-ctas reveal d3">
+      <a href="#estimator" class="btn btn-gold">Get Instant Estimate
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#materials" class="btn btn-ghost">Explore Materials</a>
+    </div>
+    <div class="hero-meta reveal d3">
+      <span><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9L22 9.3l-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l7.4-.4z"/></svg>GAF Master Elite</span>
+      <span><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>50-Year Warranty</span>
+      <span><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>24-Hr Response</span>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">Scroll</div>
+</header>
+
+<!-- MARQUEE -->
+<div class="emergency">
+  <div class="wrap"><span><b>Storm damage?</b> 24-hour emergency tarping across South Florida — <a href="tel:+19545550134">(954) 555-0134</a></span></div>
+</div>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>50-Year Warranty</span><span>·</span><span>Licensed &amp; Insured</span><span>·</span><span>2,400+ Roofs Completed</span><span>·</span><span>Hurricane-Rated Systems</span><span>·</span><span>4.9-Star Rated</span><span>·</span><span>Free Inspections</span><span>·</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num"><span class="count" data-to="2400">0</span><em>+</em></div><div class="lbl">Roofs Completed</div></div>
+      <div class="stat reveal d1"><div class="num"><span class="count" data-to="4.9" data-dec="1">0</span><em>/5</em></div><div class="lbl">Average Rating</div></div>
+      <div class="stat reveal d2"><div class="num"><span class="count" data-to="50">0</span><em>-yr</em></div><div class="lbl">Workmanship Warranty</div></div>
+      <div class="stat reveal d3"><div class="num"><span class="count" data-to="24">0</span><em>hr</em></div><div class="lbl">Storm Response Time</div></div>
+    </div>
+  </div>
+</section>
+<!-- APEX STANDARD -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow reveal">The Apex Standard</div>
+    <h2 class="display reveal" style="font-size:clamp(2.6rem,6vw,5rem)">Not all roofers<br>are roofers.</h2>
+    <div class="standard-grid">
+      <div class="std reveal">
+        <div class="n">01</div>
+        <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <h3>Drone Inspections</h3>
+        <p>Every quote starts with a 4K drone survey — 200+ photos of your roof you get to keep, whether you hire us or not.</p>
+      </div>
+      <div class="std reveal d1">
+        <div class="n">02</div>
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        <h3>In-House Crews</h3>
+        <p>No day labor, no subcontractor roulette. Our own factory-trained teams — background-checked, uniformed, accountable.</p>
+      </div>
+      <div class="std reveal d2">
+        <div class="n">03</div>
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <h3>Daily Photo Feed</h3>
+        <p>Watch your roof come together from your phone. Time-stamped progress photos land in your inbox every evening.</p>
+      </div>
+      <div class="std reveal d3">
+        <div class="n">04</div>
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>47-Point Closeout</h3>
+        <p>Final walkthrough on a 47-point checklist — magnetic nail sweep twice daily, landscaping protected, permits closed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATOR -->
+<section class="section estimator" id="estimator">
+  <div class="wrap">
+    <div class="eyebrow reveal">AI Instant Estimator</div>
+    <h2 class="display reveal" style="font-size:clamp(2.6rem,6vw,5rem)">Know your number<br>in 30 seconds.</h2>
+    <p class="lead reveal" style="margin-top:1.2rem">No email required. No sales call. Our estimator prices your roof the same way our project managers do — live, as you adjust.</p>
+    <div class="est-shell reveal">
+      <div>
+        <div class="est-field">
+          <label>Roof size <output id="sqftOut">2,200 sq ft</output></label>
+          <input type="range" id="sqft" min="800" max="6000" step="50" value="2200" aria-label="Roof size in square feet">
+        </div>
+        <div class="est-field">
+          <label>Stories</label>
+          <div class="seg" id="stories" role="group" aria-label="Number of stories">
+            <button class="active" data-v="1">1 Story</button>
+            <button data-v="1.12">2 Stories</button>
+            <button data-v="1.22">3 Stories</button>
+          </div>
+        </div>
+        <div class="est-field" style="margin-bottom:0">
+          <label>Material</label>
+          <div class="mats" id="mats">
+            <button class="mat active" data-rate="6.5" data-name="Architectural Shingle">
+              <svg viewBox="0 0 24 24"><path d="M3 18l4-9 4 9M11 18l4-9 4 9M19 18l2-4.5"/></svg>
+              <div class="t">Architectural Shingle</div><div class="p">$6.50 / sq ft</div>
+            </button>
+            <button class="mat" data-rate="11" data-name="Standing-Seam Metal">
+              <svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11M4 13h16M9 20v-7M15 20v-7"/></svg>
+              <div class="t">Standing-Seam Metal</div><div class="p">$11.00 / sq ft</div>
+            </button>
+            <button class="mat" data-rate="15" data-name="Concrete Tile">
+              <svg viewBox="0 0 24 24"><path d="M3 16c2-1 4-1 6 0s4 1 6 0 4-1 6 0M3 12c2-1 4-1 6 0s4 1 6 0 4-1 6 0M12 4v4"/></svg>
+              <div class="t">Concrete Tile</div><div class="p">$15.00 / sq ft</div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="est-out">
+        <div class="k">Your estimated range</div>
+        <div class="est-range" id="estRange"><em>$13,200</em> – <em>$15,600</em></div>
+        <p class="est-note">Final quote confirmed after a free on-site inspection. Most projects land within this band.</p>
+        <div class="est-finance"><span>or from</span> <b id="estMonthly">$108/mo</b> <span>with 12-year financing</span></div>
+        <div class="est-lines">
+          <div><span>Material</span><b id="lineMat">Architectural Shingle</b></div>
+          <div><span>Roof size</span><b id="lineSqft">2,200 sq ft</b></div>
+          <div><span>Install timeline</span><b>2–4 days</b></div>
+          <div><span>Warranty</span><b>50 years</b></div>
+        </div>
+        <div class="est-includes">
+          <div class="k" style="margin-bottom:.8rem">Every install includes</div>
+          <ul>
+            <li>Tear-off, disposal &amp; deck inspection</li>
+            <li>Synthetic underlayment + ice &amp; water shield</li>
+            <li>Drip edge, flashing &amp; ridge vent system</li>
+            <li>Permits pulled &amp; closed by us</li>
+          </ul>
+        </div>
+        <a href="#final" class="btn btn-gold" style="justify-content:center">Book Free Inspection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="section" id="transformations">
+  <div class="wrap">
+    <div class="eyebrow reveal">Transformations</div>
+    <h2 class="display reveal" style="font-size:clamp(2.6rem,6vw,5rem)">Drag to see<br>the difference.</h2>
+    <p class="lead reveal" style="margin-top:1.2rem">A 14-year-old shingle roof in Coral Springs — stripped to the deck and rebuilt with architectural shingles in three days.</p>
+    <div class="ba reveal" id="ba" tabindex="0" role="slider" aria-label="Before and after comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <div class="scene ba-before" aria-hidden="true">
+        <div class="sky"></div><div class="ground"></div>
+        <div class="house"><div class="chim"></div><div class="roof"></div><div class="body"></div><div class="door"></div><div class="win l"></div><div class="win r"></div></div>
+        <div class="lawn"></div>
+      </div>
+      <div class="scene ba-after ba-top" aria-hidden="true">
+        <div class="sun"></div><div class="sky"></div><div class="ground"></div>
+        <div class="house"><div class="chim"></div><div class="roof"></div><div class="body"></div><div class="door"></div><div class="win l"></div><div class="win r"></div></div>
+        <div class="lawn"></div>
+      </div>
+      <span class="ba-tag b">Before</span><span class="ba-tag a">After</span>
+      <div class="ba-handle"><div class="ba-knob">↔</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS BENTO -->
+<section class="section" id="materials" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow reveal">Roofing Systems</div>
+    <h2 class="display reveal" style="font-size:clamp(2.6rem,6vw,5rem)">Pick your armor.</h2>
+    <div class="bento">
+      <div class="bcard reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 18l4-9 4 9M11 18l4-9 4 9M19 18l2-4.5"/></svg></div>
+        <h3>Architectural Shingle</h3>
+        <div class="price">$6.50<small> / SQ FT</small></div>
+        <ul>
+          <li><span>Lifespan</span><b>25–30 yrs</b></li>
+          <li><span>Wind rating</span><b>130 mph</b></li>
+          <li><span>Best for</span><b>Value + curb appeal</b></li>
+        </ul>
+      </div>
+      <div class="bcard reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11M4 13h16M9 20v-7M15 20v-7"/></svg></div>
+        <h3>Standing-Seam Metal</h3>
+        <div class="price">$11.00<small> / SQ FT</small></div>
+        <ul>
+          <li><span>Lifespan</span><b>40–70 yrs</b></li>
+          <li><span>Wind rating</span><b>170 mph</b></li>
+          <li><span>Best for</span><b>Storm zones, forever roofs</b></li>
+        </ul>
+      </div>
+      <div class="bcard reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 16c2-1 4-1 6 0s4 1 6 0 4-1 6 0M3 12c2-1 4-1 6 0s4 1 6 0 4-1 6 0M12 4v4"/></svg></div>
+        <h3>Concrete Tile</h3>
+        <div class="price">$15.00<small> / SQ FT</small></div>
+        <ul>
+          <li><span>Lifespan</span><b>50+ yrs</b></li>
+          <li><span>Wind rating</span><b>150 mph</b></li>
+          <li><span>Best for</span><b>Luxury homes, heat defense</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow reveal">How It Works</div>
+    <h2 class="display reveal" style="font-size:clamp(2.6rem,6vw,5rem)">From inspection<br>to warranty.</h2>
+    <div class="steps">
+      <div class="step reveal"><div class="dot">01</div><div><span class="when">Day 0 — Free</span><h3>Inspection</h3><p>A certified inspector walks your roof, photographs everything, and checks the attic for hidden moisture — 60 minutes, zero pressure, zero cost.</p><div class="deliv">200+ drone photos · attic moisture scan</div></div></div>
+      <div class="step reveal"><div class="dot">02</div><div><span class="when">Day 1 — Fixed Price</span><h3>Proposal</h3><p>One fixed price in writing, line by line. Material, labor, permits, and disposal — no allowances, no "unforeseen conditions" surprises later.</p><div class="deliv">Fixed price · line-item scope · 24-hr turnaround</div></div></div>
+      <div class="step reveal"><div class="dot">03</div><div><span class="when">Days 3–6 — The Build</span><h3>Build</h3><p>Factory-trained crew, magnetic nail sweep twice daily, landscaping protected. Most homes finished in 2–4 days with a live photo feed of progress.</p><div class="deliv">Daily photo feed · magnetic nail sweep · 2–4 days</div></div></div>
+      <div class="step reveal"><div class="dot">04</div><div><span class="when">Day 7 → Year 50</span><h3>Warranty</h3><p>Final walkthrough with a 47-point checklist, then our 50-year workmanship warranty kicks in — transferable if you sell the home.</p><div class="deliv">Transferable · 47-point closeout · wind-mit docs</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow reveal">Homeowner Reviews</div>
+    <h2 class="display reveal" style="font-size:clamp(2.6rem,6vw,5rem)">Word travels<br>on rooftops.</h2>
+    <div class="rev-grid">
+      <div class="rev reveal">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg></div>
+        <p>"After Hurricane Milton tore half our shingles off, Apex had a crew tarping the roof within six hours and a full metal replacement done in four days. The insurance paperwork alone was worth it."</p>
+        <div class="who"><b>Marcus Delgado</b><span>Fort Lauderdale · Metal Roof</span></div>
+      </div>
+      <div class="rev reveal d1">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg></div>
+        <p>"Three other companies quoted me and vanished. Apex showed up with drone photos, a fixed price, and finished a day early. My yard was cleaner than when they arrived."</p>
+        <div class="who"><b>Priya Raman</b><span>Coral Springs · Shingle Roof</span></div>
+      </div>
+      <div class="rev reveal d2">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.9 6.4.4-5.4 4.9 1.5 7.3L12 18l-6.1 3.5 1.5-7.3L2 9.3l6.4-.4z"/></svg></div>
+        <p>"The tile roof they installed dropped our attic temperature 18 degrees and our insurance premium followed. Neighbors stop to ask who did it. Worth every penny."</p>
+        <div class="who"><b>Robert &amp; Elena Voss</b><span>Boca Raton · Tile Roof</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA + FAQ -->
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow reveal">Service Area &amp; Answers</div>
+    <h2 class="display reveal" style="font-size:clamp(2.6rem,6vw,5rem)">Proudly local.</h2>
+    <div class="area-faq">
+      <div class="reveal">
+        <p class="lead" style="font-size:1rem">Our crews run daily routes across Broward, Miami-Dade, and Palm Beach counties.</p>
+        <div class="chips">
+          <span class="chip">Fort Lauderdale</span><span class="chip">Miami</span><span class="chip">Boca Raton</span>
+          <span class="chip">West Palm Beach</span><span class="chip">Pompano Beach</span><span class="chip">Hollywood</span>
+          <span class="chip">Coral Springs</span><span class="chip">Delray Beach</span><span class="chip">Davie</span>
+          <span class="chip">Plantation</span><span class="chip">Deerfield Beach</span><span class="chip">Kendall</span>
+        </div>
+      </div>
+      <div class="faq reveal d1" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q">What does the 50-year warranty actually cover?<span class="ic">+</span></button>
+          <div class="faq-a"><p>Both materials and our workmanship — leaks, blow-offs, and installation defects — for 50 years. It's fully transferable to a new homeowner, which appraisers consistently flag as a resale advantage.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How long does a roof replacement take?<span class="ic">+</span></button>
+          <div class="faq-a"><p>Most single-family homes finish in 2–4 days: day one for tear-off and deck inspection, the rest for installation and detailing. Tile takes slightly longer. You'll get a firm schedule in writing before we start.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you handle insurance claims?<span class="ic">+</span></button>
+          <div class="faq-a"><p>Yes — storm and hurricane damage is a large part of our work. We document everything with drone imagery, meet your adjuster on-site, and make sure the scope covers a full code-compliant replacement, not a patch.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you offer financing?<span class="ic">+</span></button>
+          <div class="faq-a"><p>We offer 12-month same-as-cash plans and terms up to 12 years through our lending partners, with approval in about 15 minutes during your inspection visit. No prepayment penalties.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Will a new roof lower my insurance?<span class="ic">+</span></button>
+          <div class="faq-a"><p>Often, significantly. Florida insurers discount wind-mitigation features — we provide the certified wind-mitigation inspection paperwork after every install, which homeowners typically use to cut premiums 20–40%.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE BAND -->
+<section class="guarantee">
+  <div class="wrap guar-in">
+    <div class="seal reveal"><b>50</b><span>YEARS</span></div>
+    <div class="reveal d1">
+      <h3>The warranty other roofers won't put in writing.</h3>
+      <p>Fifty years on materials and workmanship — leaks, blow-offs, installation defects. Transferable to the next homeowner. If we ever have to come back, we come back free.</p>
+    </div>
+    <a href="#estimator" class="btn btn-ghost reveal d2">See Your Price</a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section final" id="final">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="justify-content:center">Free Inspection · No Obligation</div>
+    <h2 class="reveal">Your roof has<br><span class="gold">one job.</span></h2>
+    <p class="lead reveal">Make sure it does it for the next 50 years. Book a free inspection — 60 minutes, drone photos included, fixed price in 24 hours.</p>
+    <div class="reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+19545550134" class="btn btn-gold">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.9z"/></svg>
+        (954) 555-0134
+      </a>
+      <a href="#estimator" class="btn btn-ghost">Re-run the Estimator</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:1.2rem;display:inline-block">APEX<b>.</b></a>
+        <p>Premium roofing for South Florida homes.<br>Storm-rated. White-glove. 50-year warranted.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#estimator">Instant Estimator</a>
+        <a href="#materials">Materials</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+19545550134">(954) 555-0134</a>
+        <p>Serving Broward · Miami-Dade · Palm Beach</p>
+        <p>FL License CCC-1331845</p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Apex Roofing — Concept Case Study</span>
+      <span>Design concept by JBizz Web Dev</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CALL BAR -->
+<div class="callbar">
+  <a class="call" href="tel:+19545550134">
+    <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.9z"/></svg>
+    Call Now
+  </a>
+  <a class="est" href="#estimator">Free Estimate</a>
+</div>
+<script>
+(function(){
+  "use strict";
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Preloader ---------- */
+  const loader = document.getElementById('loader');
+  window.addEventListener('load', () => setTimeout(() => loader.classList.add('done'), 900));
+  setTimeout(() => loader.classList.add('done'), 3200); // failsafe
+
+  /* ---------- Nav ---------- */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  const menu = document.getElementById('mobileMenu');
+  document.getElementById('menuBtn').addEventListener('click', () => menu.classList.add('open'));
+  document.getElementById('menuClose').addEventListener('click', () => menu.classList.remove('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  /* ---------- Scroll progress ---------- */
+  const prog = document.getElementById('progress');
+  const onScroll2 = () => {
+    const h = document.documentElement;
+    const p = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+    prog.style.width = p + '%';
+  };
+  window.addEventListener('scroll', onScroll2, {passive:true}); onScroll2();
+
+  /* ---------- Marquee: duplicate for seamless loop ---------- */
+  const track = document.getElementById('marqueeTrack');
+  track.innerHTML += track.innerHTML;
+
+  /* ---------- Scroll reveals ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ---------- Animated counters ---------- */
+  const fmt = (v, dec) => dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US');
+  const counters = document.querySelectorAll('.count');
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec||'0', 10);
+    cio.unobserve(el);
+    if (reduced) { el.textContent = fmt(to, dec); return; }
+    const t0 = performance.now(), dur = 1600;
+    const tick = t => {
+      const p = Math.min((t - t0) / dur, 1), e2 = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(to * e2, dec);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }), {threshold:.5});
+  counters.forEach(c => cio.observe(c));
+
+  /* ---------- Estimator ---------- */
+  const sqft = document.getElementById('sqft'),
+        sqftOut = document.getElementById('sqftOut'),
+        seg = document.getElementById('stories'),
+        mats = document.getElementById('mats'),
+        range = document.getElementById('estRange'),
+        lineMat = document.getElementById('lineMat'),
+        lineSqft = document.getElementById('lineSqft');
+  let storiesMult = 1, rate = 6.5, matName = 'Architectural Shingle';
+  let shownLo = 0, shownHi = 0, raf = null;
+
+  const money = v => '$' + Math.round(v).toLocaleString('en-US');
+  const monthlyEl = document.getElementById('estMonthly');
+  function paintMonthly(hi){ monthlyEl.textContent = money(hi / 144) + '/mo'; }
+  function paintRange(){
+    const v = (sqft.value - sqft.min) / (sqft.max - sqft.min) * 100;
+    sqft.style.setProperty('--fill', v + '%');
+  }
+  function targets(){
+    const base = sqft.value * rate * storiesMult;
+    return [base * .92, base * 1.08];
+  }
+  function render(){
+    const [lo, hi] = targets();
+    sqftOut.textContent = Number(sqft.value).toLocaleString('en-US') + ' sq ft';
+    lineMat.textContent = matName;
+    lineSqft.textContent = Number(sqft.value).toLocaleString('en-US') + ' sq ft';
+    paintMonthly(hi);
+    if (reduced) { range.innerHTML = '<em>'+money(lo)+'</em> – <em>'+money(hi)+'</em>'; shownLo = lo; shownHi = hi; return; }
+    const fromLo = shownLo || lo * .6, fromHi = shownHi || hi * .6, t0 = performance.now(), dur = 650;
+    cancelAnimationFrame(raf);
+    const tick = t => {
+      const p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      shownLo = fromLo + (lo - fromLo) * e;
+      shownHi = fromHi + (hi - fromHi) * e;
+      range.innerHTML = '<em>'+money(shownLo)+'</em> – <em>'+money(shownHi)+'</em>';
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+  }
+  sqft.addEventListener('input', () => { paintRange(); render(); });
+  seg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    seg.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active'); storiesMult = parseFloat(b.dataset.v); render();
+  }));
+  mats.querySelectorAll('.mat').forEach(m => m.addEventListener('click', () => {
+    mats.querySelectorAll('.mat').forEach(x => x.classList.remove('active'));
+    m.classList.add('active'); rate = parseFloat(m.dataset.rate); matName = m.dataset.name; render();
+  }));
+  paintRange(); render();
+
+  /* ---------- Before / After drag ---------- */
+  const ba = document.getElementById('ba');
+  let dragging = false, baX = 50;
+  const setX = clientX => {
+    const r = ba.getBoundingClientRect();
+    baX = Math.min(Math.max((clientX - r.left) / r.width, .04), .96) * 100;
+    ba.style.setProperty('--x', baX + '%');
+    ba.setAttribute('aria-valuenow', Math.round(baX));
+  };
+  const nudge = d => {
+    baX = Math.min(Math.max(baX + d, 4), 96);
+    ba.style.setProperty('--x', baX + '%');
+    ba.setAttribute('aria-valuenow', Math.round(baX));
+  };
+  ba.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') { nudge(-4); e.preventDefault(); }
+    if (e.key === 'ArrowRight') { nudge(4); e.preventDefault(); }
+  });
+  ba.addEventListener('pointerdown', e => { dragging = true; ba.setPointerCapture(e.pointerId); setX(e.clientX); });
+  ba.addEventListener('pointermove', e => { if (dragging) setX(e.clientX); });
+  ['pointerup','pointercancel','pointerleave'].forEach(ev => ba.addEventListener(ev, () => dragging = false));
+
+  /* ---------- Process step activation ---------- */
+  const steps = document.querySelectorAll('.step');
+  const sio = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) {
+      steps.forEach(s => s.classList.remove('active'));
+      e.target.classList.add('active');
+    }
+  }), {threshold:.6, rootMargin:'-20% 0px -20% 0px'});
+  steps.forEach(s => sio.observe(s));
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => {
+        o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!open) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+})();
+</script>
+</body>
+</html>
