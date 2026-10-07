@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBizz Lead Vault | Verified Contractor Lead Packs</title>
+    <meta name="description" content="Premium contractor lead packs — 20 verified businesses per pack, 31 data columns, A/B/C graded. Roofing, plumbing, electrical. Instant download via Gumroad.">
+    <link rel="canonical" href="https://jbizzwebdev.com/lead-vault.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jbizzwebdev.com/lead-vault.html">
+    <meta property="og:title" content="JBizz Lead Vault | Verified Contractor Lead Packs">
+    <meta property="og:description" content="20 verified contractor businesses per pack. 31 data columns. A/B/C graded. Instant CSV download.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/jbizz-logo-original.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0a0a0b">
+    <link rel="icon" href="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/favicon-32x32.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
+        .glass {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .glass-dark {
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop: blur(24px);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(212,175,55,0.6),
+                        0 0 50px rgba(212,175,55,0.3);
+        }
+        .modern-card { transition: all 0.3s ease; }
+        .modern-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.5);
+        }
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+        .text-gold { color: #D4AF37; }
+        .sample-table th, .sample-table td { padding: 12px 16px; text-align: left; white-space: nowrap; }
+        .sample-table thead th { color: #D4AF37; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.15); }
+        .sample-table tbody td { border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: rgba(255,255,255,0.75); }
+        .grade-a { color: #34d399; font-weight: 700; }
+        .grade-b { color: #D4AF37; font-weight: 700; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html"><img src="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/jbizz-logo-original.png" alt="J Bizz Web Dev" class="h-9 w-auto"></a>
+            <div class="hidden md:flex items-center gap-x-8 text-sm text-white/70">
+                <a href="#packs" class="hover:text-white transition">Packs</a>
+                <a href="#inside" class="hover:text-white transition">What's Inside</a>
+                <a href="#sample" class="hover:text-white transition">Sample Data</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </div>
+            <a href="#packs" class="glow-gold bg-white hover:bg-[#D4AF37] text-black px-8 py-3.5 rounded-2xl text-sm font-bold transition">Browse Packs</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-[92dvh] flex items-center pt-28 pb-16 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:5px_5px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center gap-x-2 px-5 py-2 rounded-full glass mb-8 reveal">
+                <i class="fas fa-vault text-gold text-xs"></i>
+                <span class="text-xs tracking-[2.5px] font-medium text-white/70">THE JBIZZ LEAD VAULT</span>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-semibold tracking-tight leading-[0.95] mb-6 reveal">
+                Contractor leads<br>worth <span class="text-gold">paying for.</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-white/70 max-w-2xl mx-auto reveal">
+                Every pack holds 20 verified, operating contractor businesses — each enriched across
+                31 data columns and graded A, B, or C. No scraped junk. No dead numbers. Just
+                businesses you can actually pitch.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center reveal">
+                <a href="#packs" class="glow-gold inline-flex items-center justify-center bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Browse the Packs</a>
+                <a href="#sample" class="inline-flex items-center justify-center glass px-10 py-4 rounded-2xl font-bold hover:bg-white/15 transition">See Sample Data</a>
+            </div>
+            <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto reveal">
+                <div class="glass-dark rounded-2xl p-5 border border-white/10">
+                    <div class="text-3xl font-bold text-gold">31</div>
+                    <div class="text-xs text-white/60 mt-1 tracking-wide">DATA COLUMNS<br>PER BUSINESS</div>
+                </div>
+                <div class="glass-dark rounded-2xl p-5 border border-white/10">
+                    <div class="text-3xl font-bold text-gold">20</div>
+                    <div class="text-xs text-white/60 mt-1 tracking-wide">VERIFIED<br>BUSINESSES / PACK</div>
+                </div>
+                <div class="glass-dark rounded-2xl p-5 border border-white/10">
+                    <div class="text-3xl font-bold text-gold">A–C</div>
+                    <div class="text-xs text-white/60 mt-1 tracking-wide">QUALITY<br>GRADED</div>
+                </div>
+                <div class="glass-dark rounded-2xl p-5 border border-white/10">
+                    <div class="text-3xl font-bold text-gold">3</div>
+                    <div class="text-xs text-white/60 mt-1 tracking-wide">TRADES<br>COVERED</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packs -->
+    <section id="packs" class="py-20 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">THE COLLECTION</div>
+                <h2 class="text-5xl md:text-6xl font-semibold tracking-tight">Choose your pack.</h2>
+                <p class="mt-6 text-lg text-white/70 max-w-xl mx-auto">Instant CSV download after checkout. Secure payment through Gumroad.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Roofing -->
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal flex flex-col">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-house-chimney text-gold text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Roofing 20-Pack</h3>
+                    <p class="text-white/60 text-sm mb-6">20 verified roofing contractors, enriched and graded. 9 A-grade / 11 B-grade in the current pack.</p>
+                    <ul class="text-white/60 text-sm space-y-2 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>31 data columns per business</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Website audit + conversion leaks</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Decision-maker contacts where found</li>
+                    </ul>
+                    <div class="flex items-baseline gap-2 mb-5"><span class="text-4xl font-bold">$29</span><span class="text-white/40 text-sm">one-time</span></div>
+                    <a href="https://goetzian61.gumroad.com/l/eavat" target="_blank" rel="noopener" class="inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get the Pack</a>
+                </div>
+
+                <!-- Plumbing -->
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal flex flex-col">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-wrench text-gold text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Plumbing 20-Pack</h3>
+                    <p class="text-white/60 text-sm mb-6">20 verified plumbing businesses, enriched and graded. 6 A-grade / 13 B-grade / 1 C-grade in the current pack.</p>
+                    <ul class="text-white/60 text-sm space-y-2 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>31 data columns per business</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Website audit + conversion leaks</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Urgency / intent scoring</li>
+                    </ul>
+                    <div class="flex items-baseline gap-2 mb-5"><span class="text-4xl font-bold">$29</span><span class="text-white/40 text-sm">one-time</span></div>
+                    <a href="https://goetzian61.gumroad.com/l/tpras" target="_blank" rel="noopener" class="inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get the Pack</a>
+                </div>
+
+                <!-- Electricians -->
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal flex flex-col">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-gold text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Electricians 20-Pack</h3>
+                    <p class="text-white/60 text-sm mb-6">20 verified electrical contractors, enriched and graded. 6 A-grade / 13 B-grade / 1 C-grade in the current pack.</p>
+                    <ul class="text-white/60 text-sm space-y-2 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>31 data columns per business</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Website audit + conversion leaks</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Sorted by grade, then opportunity</li>
+                    </ul>
+                    <div class="flex items-baseline gap-2 mb-5"><span class="text-4xl font-bold">$29</span><span class="text-white/40 text-sm">one-time</span></div>
+                    <a href="https://goetzian61.gumroad.com/l/eiuvap" target="_blank" rel="noopener" class="inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get the Pack</a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <!-- Mixed 50 -->
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-white/10 reveal flex flex-col">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-layer-group text-gold text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Mixed 50-Pack</h3>
+                    <p class="text-white/60 text-sm mb-6">50 businesses across roofing, plumbing, and electrical — the sampler for agencies testing multiple trades. 25 warm / 25 nurture.</p>
+                    <ul class="text-white/60 text-sm space-y-2 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>All three trades in one file</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Same 31-column enrichment</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Zero overlap with outreach lists</li>
+                    </ul>
+                    <div class="flex items-baseline gap-2 mb-5"><span class="text-4xl font-bold">$39</span><span class="text-white/40 text-sm">one-time</span></div>
+                    <a href="https://goetzian61.gumroad.com/l/eprxpy" target="_blank" rel="noopener" class="inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get the Pack</a>
+                </div>
+
+                <!-- Bundle -->
+                <div class="modern-card glass-dark rounded-3xl p-8 border border-[#D4AF37]/50 glow-gold reveal flex flex-col relative">
+                    <div class="absolute -top-3 left-8 text-[11px] font-bold tracking-[2px] px-4 py-1.5 bg-[#D4AF37] text-black rounded-full">BEST VALUE · SAVE $18</div>
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-crown text-gold text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">All-Three Bundle</h3>
+                    <p class="text-white/60 text-sm mb-6">Every premium 20-pack — roofing, plumbing, and electricians. 60 verified businesses, fully enriched. The complete vault.</p>
+                    <ul class="text-white/60 text-sm space-y-2 mb-8 flex-1">
+                        <li><i class="fas fa-check text-gold mr-2"></i>All 3 premium 20-packs included</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>60 businesses, 31 columns each</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>$87 value for $69</li>
+                    </ul>
+                    <div class="flex items-baseline gap-2 mb-5"><span class="text-4xl font-bold">$69</span><span class="text-white/40 text-sm line-through">$87</span><span class="text-white/40 text-sm">one-time</span></div>
+                    <a href="https://goetzian61.gumroad.com/l/wapfe" target="_blank" rel="noopener" class="glow-gold inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get the Bundle</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's inside -->
+    <section id="inside" class="py-20 border-t border-white/10 bg-black">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">THE STANDARD</div>
+                <h2 class="text-5xl md:text-6xl font-semibold tracking-tight">What's inside<br>every row.</h2>
+                <p class="mt-6 text-lg text-white/70 max-w-xl mx-auto">31 data columns per business, grouped into six research layers. Where data can't be verified, the cell says so — <span class="text-white font-medium">Not Found</span> or <span class="text-white font-medium">Not verified</span>, never a guess.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-dark rounded-3xl p-7 border border-white/10 reveal">
+                    <i class="fas fa-building text-gold text-2xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Business Identity</h3>
+                    <p class="text-white/60 text-sm">Legal and trade name, category, service area, address, years in business, license signals where public.</p>
+                </div>
+                <div class="glass-dark rounded-3xl p-7 border border-white/10 reveal">
+                    <i class="fas fa-address-book text-gold text-2xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Contact Layer</h3>
+                    <p class="text-white/60 text-sm">Phone, email, website, contact forms, social profiles. Conflicting numbers are flagged, not silently picked.</p>
+                </div>
+                <div class="glass-dark rounded-3xl p-7 border border-white/10 reveal">
+                    <i class="fas fa-magnifying-glass-chart text-gold text-2xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Website Audit</h3>
+                    <p class="text-white/60 text-sm">Does the site load? Mobile-friendly? SSL? Last updated? A dead or hijacked site is your strongest rebuild pitch — it's marked.</p>
+                </div>
+                <div class="glass-dark rounded-3xl p-7 border border-white/10 reveal">
+                    <i class="fas fa-faucet-drip text-gold text-2xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Conversion Leaks</h3>
+                    <p class="text-white/60 text-sm">Missing click-to-call, no quote form, no reviews widget, slow load — the specific gaps you can sell the fix for.</p>
+                </div>
+                <div class="glass-dark rounded-3xl p-7 border border-white/10 reveal">
+                    <i class="fas fa-user-tie text-gold text-2xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Decision Maker</h3>
+                    <p class="text-white/60 text-sm">Owner or manager name and title where publicly findable. Marked Not Found when it isn't — never fabricated.</p>
+                </div>
+                <div class="glass-dark rounded-3xl p-7 border border-white/10 reveal">
+                    <i class="fas fa-arrow-trend-up text-gold text-2xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Scores &amp; Grade</h3>
+                    <p class="text-white/60 text-sm">Urgency / intent score, project-value opportunity, and the final A, B, or C grade. Sorted grade-first so your best targets are on top.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample data -->
+    <section id="sample" class="py-20 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">TRANSPARENCY</div>
+                <h2 class="text-5xl md:text-6xl font-semibold tracking-tight">See the data<br>before you pay.</h2>
+                <p class="mt-6 text-lg text-white/70 max-w-xl mx-auto">A few rows from the actual schema. <span class="text-gold font-medium">Sample values are illustrative</span> — your download contains the real, researched businesses.</p>
+            </div>
+            <div class="glass-dark rounded-3xl border border-white/10 overflow-x-auto reveal">
+                <table class="sample-table w-full min-w-[900px]">
+                    <thead>
+                        <tr>
+                            <th>Business</th><th>Trade</th><th>Grade</th><th>Phone</th><th>Website</th><th>Site Status</th><th>Top Conversion Leak</th><th>Urgency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-white font-medium">Sample Roofing Co.</td><td>Roofing</td><td><span class="grade-a">A</span></td><td>(555) 010-2233</td><td>sampleroofing.example</td><td>Dead — domain parked</td><td>No site at all; GMB only</td><td>92</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white font-medium">Example Plumbing LLC</td><td>Plumbing</td><td><span class="grade-a">A</span></td><td>(555) 010-4471</td><td>exampleplumbing.example</td><td>Live, not mobile-friendly</td><td>No click-to-call on mobile</td><td>85</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white font-medium">Demo Electric Inc.</td><td>Electrical</td><td><span class="grade-b">B</span></td><td>(555) 010-8890</td><td>demoelectric.example</td><td>Live, outdated (2019)</td><td>No quote form; phone only</td><td>71</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white font-medium">Illustrative Air Pros</td><td>HVAC</td><td><span class="grade-b">B</span></td><td>Not Found</td><td>illustrativeair.example</td><td>Live, slow (6s load)</td><td>No reviews widget</td><td>64</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-white/40 text-sm mt-6 reveal">Full packs include all 31 columns — contact details, decision makers, full audit notes, and scoring.</p>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20 border-t border-white/10 bg-black">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">SIMPLE</div>
+                <h2 class="text-5xl md:text-6xl font-semibold tracking-tight">How it works.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center reveal">
+                    <div class="w-14 h-14 rounded-full bg-[#D4AF37]/15 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-gold font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Pick your pack</h3>
+                    <p class="text-white/60 text-sm">Choose the trade — or grab the bundle and cover all three. Checkout is handled securely by Gumroad.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-14 h-14 rounded-full bg-[#D4AF37]/15 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-gold font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Download instantly</h3>
+                    <p class="text-white/60 text-sm">Your CSV is ready the second payment clears. No waiting, no drip-feed, no account needed.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-14 h-14 rounded-full bg-[#D4AF37]/15 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-gold font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Start pitching</h3>
+                    <p class="text-white/60 text-sm">Open in Excel or Google Sheets. A-grades first, conversion leaks highlighted — your pitch writes itself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 border-t border-white/10">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">QUESTIONS</div>
+                <h2 class="text-5xl md:text-6xl font-semibold tracking-tight">FAQ</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="glass-dark rounded-2xl border border-white/10 p-6 group reveal">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">What format is the data in? <i class="fas fa-chevron-down text-gold group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-4 text-white/60">CSV — opens in Excel, Google Sheets, or any CRM that imports CSV. 31 columns, one row per business, sorted by grade then opportunity.</p>
+                </details>
+                <details class="glass-dark rounded-2xl border border-white/10 p-6 group reveal">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">How fresh is the data? <i class="fas fa-chevron-down text-gold"></i></summary>
+                    <p class="mt-4 text-white/60">Each pack is researched and verified before listing. Businesses are confirmed operating at research time; contact details follow strict Not Found / Not verified rules rather than guesses.</p>
+                </details>
+                <details class="glass-dark rounded-2xl border border-white/10 p-6 group reveal">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">What do the A, B, C grades mean? <i class="fas fa-chevron-down text-gold group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-4 text-white/60"><span class="grade-a">A</span> — strongest pitch targets: clear need plus reachable decision maker. <span class="grade-b">B</span> — solid businesses worth contacting, lighter urgency signals. C — valid operating businesses with thinner data or lower opportunity. Every pack lists its grade mix up front.</p>
+                </details>
+                <details class="glass-dark rounded-2xl border border-white/10 p-6 group reveal">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">Can I share or resell the pack? <i class="fas fa-chevron-down text-gold group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-4 text-white/60">Your purchase is licensed to you / your agency for outreach use. Reselling or redistributing the raw files isn't permitted.</p>
+                </details>
+                <details class="glass-dark rounded-2xl border border-white/10 p-6 group reveal">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">What if a number is disconnected? <i class="fas fa-chevron-down text-gold group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-4 text-white/60">It happens — businesses change numbers. Where we found conflicting numbers during research, it's flagged in the data. If you find a dead contact, tell us and we'll make it right on your next pack.</p>
+                </details>
+                <details class="glass-dark rounded-2xl border border-white/10 p-6 group reveal">
+                    <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">What's your refund policy? <i class="fas fa-chevron-down text-gold group-open:rotate-180 transition"></i></summary>
+                    <p class="mt-4 text-white/60"><span class="text-gold">[Refund policy to be finalized — placeholder.]</span> Digital download terms will be posted here before launch.</p>
+                </details>
+            </div>
+
+            <!-- Guarantee placeholder -->
+            <div class="mt-10 glass-dark rounded-3xl border border-dashed border-[#D4AF37]/40 p-8 text-center reveal">
+                <i class="fas fa-shield-halved text-gold text-3xl mb-4"></i>
+                <h3 class="font-semibold text-xl mb-2">Our Guarantee</h3>
+                <p class="text-white/60 text-sm max-w-lg mx-auto"><span class="text-gold">[Guarantee copy to be finalized.]</span> The final satisfaction guarantee for Lead Vault packs will be published here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 border-t border-white/10 bg-black">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-semibold tracking-tight mb-6 reveal">Stop scraping.<br>Start <span class="text-gold">pitching.</span></h2>
+            <p class="text-xl text-white/70 mb-10 reveal">Researched, enriched, graded. The vault is open.</p>
+            <a href="#packs" class="glow-gold inline-flex items-center justify-center bg-white text-black px-14 py-6 rounded-3xl font-bold text-xl hover:bg-[#D4AF37] transition reveal">Browse the Packs</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <img src="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/jbizz-logo-full-transparent.png" alt="J Bizz Web Developments — Designed to captivate. Coded to convert." class="h-20 w-auto">
+            <p class="text-white/40 text-sm text-center">Designed to captivate. Coded to convert.</p>
+            <div class="flex gap-x-5 text-white/50">
+                <a href="#" aria-label="X / Twitter" class="hover:text-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram" class="hover:text-gold transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook" class="hover:text-gold transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn" class="hover:text-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p class="text-center text-white/30 text-xs mt-8">© 2026 J Bizz Web Developments · jbizzwebdev.com</p>
+    </footer>
+
+    <script>
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }), { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+</body>
+</html>
