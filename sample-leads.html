@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Sample Leads | JBizz Lead Vault</title>
+    <meta name="description" content="Get 3 real contractor sample leads free — one roofing, one plumbing, one electrical. Real rows from the JBizz Lead Vault packs.">
+    <link rel="canonical" href="https://jbizzwebdev.com/sample-leads.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jbizzwebdev.com/sample-leads.html">
+    <meta property="og:title" content="Free Sample Leads | JBizz Lead Vault">
+    <meta property="og:description" content="3 real contractor sample leads, free. See the data quality before you buy the pack.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#0a0a0b">
+    <link rel="icon" href="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/favicon-32x32.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
+        .glass {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .glass-dark {
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop: blur(24px);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(212,175,55,0.6),
+                        0 0 50px rgba(212,175,55,0.3);
+        }
+        .modern-card { transition: all 0.3s ease; }
+        .modern-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.5);
+        }
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+        .text-gold { color: #D4AF37; }
+        .grade-a { color: #34d399; font-weight: 700; }
+        #samples { display: none; }
+        #samples.unlocked { display: block; }
+        .lead-field { font-size: 13px; color: rgba(255,255,255,0.6); }
+        .lead-value { font-size: 14px; color: #fff; font-weight: 500; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html"><img src="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/jbizz-logo-original.png" alt="J Bizz Web Dev" class="h-9 w-auto"></a>
+            <div class="hidden md:flex items-center gap-x-8 text-sm text-white/70">
+                <a href="lead-vault.html" class="hover:text-white transition">Lead Vault</a>
+                <a href="#how" class="hover:text-white transition">How It Works</a>
+            </div>
+            <a href="#gate" class="glow-gold bg-white hover:bg-[#D4AF37] text-black px-8 py-3.5 rounded-2xl text-sm font-bold transition">Get Free Samples</a>
+        </div>
+    </nav>
+
+    <!-- Hero + email gate -->
+    <section id="gate" class="min-h-[92dvh] flex items-center pt-28 pb-16 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(#27272a_0.8px,transparent_1px)] bg-[length:5px_5px]"></div>
+        <div class="max-w-3xl mx-auto px-6 relative z-10 text-center w-full">
+            <div class="inline-flex items-center gap-x-2 px-5 py-2 rounded-full glass mb-8 reveal">
+                <i class="fas fa-gift text-gold text-xs"></i>
+                <span class="text-xs tracking-[2.5px] font-medium text-white/70">FREE SAMPLE · NO CARD</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-[0.95] mb-6 reveal">
+                3 real leads.<br><span class="text-gold">Free.</span> Right now.
+            </h1>
+            <p class="mt-6 text-lg text-white/70 max-w-xl mx-auto reveal">
+                One roofing, one plumbing, one electrical — actual rows from the paid packs,
+                not made-up examples. Drop your email and they're yours in 30 seconds.
+            </p>
+            <form id="gate-form" class="mt-10 max-w-md mx-auto reveal">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" id="gate-email" required placeholder="you@youragency.com"
+                        class="flex-1 px-6 py-4 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[#D4AF37] transition">
+                    <button type="submit" id="gate-btn"
+                        class="glow-gold bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-[#D4AF37] transition whitespace-nowrap">Show Me</button>
+                </div>
+                <p id="gate-error" class="hidden mt-3 text-sm text-red-400">Something went wrong — please try again.</p>
+                <p class="mt-4 text-xs text-white/40">One email, zero spam. Unsubscribe anytime.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Samples (unlocked after email) -->
+    <section id="samples" class="py-20 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">YOUR SAMPLES</div>
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">Real rows. Real businesses.</h2>
+                <p class="mt-4 text-white/60 max-w-xl mx-auto">Pulled straight from the paid packs. Each full pack has 20 like this — enriched across 31 columns and graded A–C.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Roofing sample -->
+                <div class="modern-card glass-dark rounded-3xl p-7 border border-white/10 flex flex-col">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="text-[11px] font-bold tracking-[2px] px-3 py-1.5 bg-[#D4AF37]/15 text-gold rounded-full">ROOFING</span>
+                        <span class="text-sm">Grade <span class="grade-a">A</span></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Florida Quality Roofing, Inc.</h3>
+                    <p class="lead-field mb-5">Pompano Beach, FL</p>
+                    <div class="space-y-3 mb-6 flex-1">
+                        <div><div class="lead-field">Phone</div><div class="lead-value">+1 305-306-7663</div></div>
+                        <div><div class="lead-field">Website</div><a href="https://floridaqualityroofing.com/" target="_blank" rel="noopener" class="lead-value text-gold hover:underline">floridaqualityroofing.com</a></div>
+                        <div><div class="lead-field">Google rating</div><div class="lead-value">5.0 ★ · 21 reviews</div></div>
+                        <div><div class="lead-field">Urgency score</div><div class="lead-value">8 / 10</div></div>
+                        <div><div class="lead-field">Top conversion leak</div><div class="lead-value font-normal text-white/75">Instant-estimate widget works — but placeholder "car/mechanics" copy on a roofing site kills trust on the highest-intent page.</div></div>
+                    </div>
+                    <a href="https://goetzian61.gumroad.com/l/eavat" target="_blank" rel="noopener" class="inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get all 20 — $29</a>
+                </div>
+
+                <!-- Plumbing sample -->
+                <div class="modern-card glass-dark rounded-3xl p-7 border border-white/10 flex flex-col">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="text-[11px] font-bold tracking-[2px] px-3 py-1.5 bg-[#D4AF37]/15 text-gold rounded-full">PLUMBING</span>
+                        <span class="text-sm">Grade <span class="grade-a">A</span></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Roto-Rooter Plumbing &amp; Water Cleanup</h3>
+                    <p class="lead-field mb-5">Miami, FL</p>
+                    <div class="space-y-3 mb-6 flex-1">
+                        <div><div class="lead-field">Phone</div><div class="lead-value">(305) 535-2373</div></div>
+                        <div><div class="lead-field">Website</div><a href="https://www.rotorooter.com/miami/" target="_blank" rel="noopener" class="lead-value text-gold hover:underline">rotorooter.com/miami</a></div>
+                        <div><div class="lead-field">Google rating</div><div class="lead-value">4.8 ★ · 1,812 reviews</div></div>
+                        <div><div class="lead-field">Urgency score</div><div class="lead-value">9 / 10</div></div>
+                        <div><div class="lead-field">Top conversion leak</div><div class="lead-value font-normal text-white/75">"Overpriced" complaints in reviews create friction; no chat for emergency triage before calling.</div></div>
+                    </div>
+                    <a href="https://goetzian61.gumroad.com/l/tpras" target="_blank" rel="noopener" class="inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get all 20 — $29</a>
+                </div>
+
+                <!-- Electrical sample -->
+                <div class="modern-card glass-dark rounded-3xl p-7 border border-white/10 flex flex-col">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="text-[11px] font-bold tracking-[2px] px-3 py-1.5 bg-[#D4AF37]/15 text-gold rounded-full">ELECTRICAL</span>
+                        <span class="text-sm">Grade <span class="grade-a">A</span></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Battle Electric</h3>
+                    <p class="lead-field mb-5">Homestead, FL</p>
+                    <div class="space-y-3 mb-6 flex-1">
+                        <div><div class="lead-field">Phone</div><div class="lead-value">(786) 404-3885</div></div>
+                        <div><div class="lead-field">Website</div><a href="https://battleelectricfl.com/" target="_blank" rel="noopener" class="lead-value text-gold hover:underline">battleelectricfl.com</a></div>
+                        <div><div class="lead-field">Google rating</div><div class="lead-value">5.0 ★ · 100+ reviews</div></div>
+                        <div><div class="lead-field">Urgency score</div><div class="lead-value">8 / 10</div></div>
+                        <div><div class="lead-field">Top conversion leak</div><div class="lead-value font-normal text-white/75">EV/panel traffic lands on a quote form with no scheduling, no chat, no price anchors.</div></div>
+                    </div>
+                    <a href="https://goetzian61.gumroad.com/l/eiuvap" target="_blank" rel="noopener" class="inline-flex justify-center bg-white text-black px-6 py-3.5 rounded-2xl font-bold hover:bg-[#D4AF37] transition">Get all 20 — $29</a>
+                </div>
+            </div>
+
+            <!-- Bundle upsell -->
+            <div class="mt-8 glass-dark rounded-3xl p-8 border border-[#D4AF37]/50 glow-gold flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <div class="text-[11px] font-bold tracking-[2px] text-gold mb-2">BEST VALUE</div>
+                    <h3 class="text-2xl font-semibold">Want all 60? Grab the bundle.</h3>
+                    <p class="text-white/60 text-sm mt-1">Every premium 20-pack — roofing, plumbing, electrical. $87 value for $69.</p>
+                </div>
+                <a href="https://goetzian61.gumroad.com/l/wapfe" target="_blank" rel="noopener" class="glow-gold inline-flex justify-center bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-[#D4AF37] transition whitespace-nowrap">Get the Bundle — $69</a>
+            </div>
+            <p class="text-center text-white/40 text-sm mt-8">Samples shown: 3 of 3. Full packs never leave the checkout.</p>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="py-20 border-t border-white/10 bg-black">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-[#D4AF37] text-xs tracking-[3px] font-semibold mb-3">HOW IT WORKS</div>
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">Thirty seconds, no card.</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center reveal">
+                    <div class="w-14 h-14 rounded-full bg-[#D4AF37]/15 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-gold font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Enter your email</h3>
+                    <p class="text-white/60 text-sm">So we know you're a real agency, not a scraper. One email, zero spam.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-14 h-14 rounded-full bg-[#D4AF37]/15 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-gold font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">See 3 real leads</h3>
+                    <p class="text-white/60 text-sm">Actual rows from the paid packs — business, phone, site, rating, urgency, and the top conversion leak.</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-14 h-14 rounded-full bg-[#D4AF37]/15 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-gold font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Buy the full pack</h3>
+                    <p class="text-white/60 text-sm">Each sample links straight to its pack on Gumroad. Instant CSV download after checkout.</p>
+                </div>
+            </div>
+            <div class="mt-12 glass-dark rounded-3xl border border-white/10 p-8 max-w-2xl mx-auto text-center reveal">
+                <i class="fas fa-scale-balanced text-gold text-2xl mb-4"></i>
+                <h3 class="font-semibold text-lg mb-2">The honest fine print</h3>
+                <p class="text-white/60 text-sm">These 3 samples are real businesses from the paid packs — that's the point. Ratings are shown exactly as researched (self-reported claims stay labeled as such). The full packs follow the same standard: 31 columns, Not Found / Not verified where data couldn't be confirmed, never a guess.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <img src="https://raw.githubusercontent.com/jessegoetz55-design/jbizzwebdev/main/Assets/jbizz-logo-full-transparent.png" alt="J Bizz Web Developments — Designed to captivate. Coded to convert." class="h-20 w-auto">
+            <p class="text-white/40 text-sm text-center">Designed to captivate. Coded to convert.</p>
+            <div class="flex gap-x-5 text-white/50">
+                <a href="#" aria-label="X / Twitter" class="hover:text-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram" class="hover:text-gold transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook" class="hover:text-gold transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn" class="hover:text-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p class="text-center text-white/30 text-xs mt-8">© 2026 J Bizz Web Developments · jbizzwebdev.com</p>
+    </footer>
+
+    <script>
+        // Reveal on scroll
+        const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }), { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        // Email gate: capture via Formspree, then unlock samples
+        const form = document.getElementById('gate-form');
+        const samples = document.getElementById('samples');
+        const errEl = document.getElementById('gate-error');
+        const btn = document.getElementById('gate-btn');
+
+        function unlock() {
+            samples.classList.add('unlocked');
+            document.querySelectorAll('#samples .reveal').forEach(el => el.classList.add('in'));
+            setTimeout(() => samples.scrollIntoView({ behavior: 'smooth' }), 100);
+        }
+        if (sessionStorage.getItem('jbizz_samples_unlocked') === '1') {
+            form.style.display = 'none';
+            unlock();
+        }
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errEl.classList.add('hidden');
+            btn.disabled = true;
+            btn.textContent = 'Unlocking…';
+            const email = document.getElementById('gate-email').value.trim();
+            try {
+                const res = await fetch('https://formspree.io/f/xqezwqrw', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email: email, source: 'sample_leads_page', _subject: 'New sample-lead signup — jbizzwebdev.com' })
+                });
+                if (!res.ok) throw new Error('form error');
+                sessionStorage.setItem('jbizz_samples_unlocked', '1');
+                form.style.display = 'none';
+                unlock();
+            } catch (err) {
+                errEl.classList.remove('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Show Me';
+            }
+        });
+    </script>
+</body>
+</html>
